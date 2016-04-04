@@ -1,0 +1,162 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.skills-arrow {
+  background: #b3ffcc;
+  display: inline-block;
+  height: 22px;
+  /*margin-left: 20px;*/
+  /*margin-top: 55px;*/
+    position: relative;
+    width: 80px;
+}
+.skills-arrow:before {
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 11px solid #b3ffcc;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  left: 80px;
+  width: 0;
+}
+
+
+.tools-arrow { /*TODO: make underscore, not dash*/
+  background: #b3ffcc;
+  display: inline-block;
+  height: 22px;
+  /*margin-left: 40px;
+  margin-top: 55px;*/
+    position: relative;
+    width: 90px;
+}
+.tools-arrow:before {
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-right: 11px solid #b3ffcc;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  left: -10px;
+  width: 0;
+}
+
+.task-steps {
+    border: 1px solid transparent;
+    /*background: linear-gradient(0deg, white 40%, gray 60%); */
+    /*#cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;*/
+    color: #222222;
+    /*font-weight: bold;*/
+    height: auto;
+    width: auto;
+    /*overflow-x:scroll;*/
+}
+
+/*.task-sat { 
+    border: 1px solid #aaaaaa;
+    background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+    color: #222222;
+    font-weight: bold;
+    height: 150px;
+    width:900px;
+}*/
+
+.header_rotate {
+     -moz-transform: rotate(-90deg);  /* FF3.5+ */
+       -o-transform: rotate(-90deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 wrong angle  TODO: fix*/ 
+         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 wrong angle*/
+}
+
+#my_container {
+    background:  #D5E9FB; /*linear-gradient(90deg, #404040 , #66d4ff 10%,#66d4ff 90%, #404040 ); /*#66d4ff; /* linear-gradient(0deg, white 40%, #cccccc 60%); */
+    width:auto;
+    z-index: 0;
+}
+
+::-webkit-scrollbar { /* Dumb Macs have dissapearing scrollbars */
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.task, .therblig-template {
+    width: 220px; 
+    /*height: 300px; */
+    padding: 5px; 
+    float: left; 
+    margin: 0 10px 10px 0; 
+    font-size: .9em; 
+    background: transparent;
+    border:none;
+}
+
+.therblig {
+  /*background: blue;*/
+}
+
+.robo_param {
+    display:none;
+}
+
+.form-control-feedback {
+    display:none;
+}
+
+.form-control-feedback-text {
+  display:none;
+  color:#a94442;
+}
+
+.editTask_robo_param {
+    display:none;
+}
+
+.bigtask {
+  background: linear-gradient(white 80%, #404040  ); 
+  overflow-y:scroll;
+  overflow-x:visible;
+  border:solid;
+  width:240px;
+  height:545px;
+  float:left;
+  margin-right:10px;
+  z-index: 1;
+}
+
+.container{
+  width:100%;
+}
+
+#template_wrapper {
+    width:100%;
+}
+
+.therblig-template {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#edit-form {
+  margin-left: 10px;
+}
+
+#editTask_Id {
+  visibility: hidden;
+}
+

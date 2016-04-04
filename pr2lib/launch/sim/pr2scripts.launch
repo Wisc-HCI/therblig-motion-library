@@ -1,0 +1,5 @@
+<launch>
+  <!-- load ik -->
+  <include file="$(find pr2_arm_navigation_kinematics)/launch/pr2_ik_rarm_node.launch"/>
+  <include file="$(find pr2_arm_navigation_kinematics)/launch/pr2_ik_larm_node.launch"/>
+</launch>

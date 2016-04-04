@@ -1,0 +1,4 @@
+<launch> 
+    <node name="reciever" pkg="pr2lib" type="reciever"/>
+    <node name="high_level_reciever" pkg="pr2lib" type="high_level_reciever"/>
+ </launch>

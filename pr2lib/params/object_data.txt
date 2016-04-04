@@ -1,0 +1,20 @@
+0 0 0  // neglect this
+0.209 0.678 0.714  // 			object 1
+0.204 0.839 0.748 // 			object 2
+0.019 0.680 0.714   // 			object 3
+0.006 0.841 0.758 //			object 4
+0.521 0.232 0.903 //object 5
+
+
+
+
+
+// Enable this for demo
+// 0.115 0.733 0.751   // object 1 bridge
+
+
+// BACKUP STANDARD
+// 0.209 0.678 0.714  // 			object 1
+// 0.204 0.839 0.748 // 			object 2
+// 0.019 0.680 0.714   // 			object 3
+// 0.006 0.841 0.758 //			object 4

@@ -1,0 +1,5 @@
+<launch> 
+  <node name="cartesian_ik_trajectory_executor_r" pkg="pr2lib" type="ik_r"/>
+  <node name="cartesian_ik_trajectory_executor_l" pkg="pr2lib" type="ik_l"/>
+  <node name="reciever" pkg="pr2lib" type="reciever"/>>
+ </launch>

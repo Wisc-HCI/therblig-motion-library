@@ -1,0 +1,89 @@
+
+
+
+ <div id="<%= task.id %>" class="task therblig alltasks" style="float:left;position:static;top:<%=task.order_number%>"> 
+                            <div>
+                              <a href="/destroy/<%= task.id %>" title="Delete"><image src="images/delete.png" height="20px"></a>
+                              <script> var tasks2 = <%- JSON.stringify(tasks) %> </script>
+                              <a onclick="editTask(this, tasks2)" title="Edit" id="<%= task.id %>"><image src="images/edit.png" height="20px"></a>
+                            </div>
+                            <div style="border-style:solid;background:white">
+                                <!-- <p>ID: <%= task.id %> -->
+                                <p style="text-align:center;font-size:large"><%-task.descript%></p>
+
+                                    <!--  Parents: <par><%= task.parents %></par><br>-->
+
+                               <!--  <%if (task.duration != null && task.duration != "") { %>
+                                    Duration: <%= task.duration %><br>
+                                <% } %> -->
+     <!--                            <%if (task.skills.length != 0 ) { %>
+                                    Skills: <%= task.skills %><br>
+                                <% } %> 
+                                <%if (task.tools.length != 0) { %>
+                                    Tools: <%= task.tools %><br>
+                                <% } %>  -->
+    <!--                             <%if (task.parents.length != 0) { %>
+                                    Parents: <%= task.parents %><br>
+                                <% } %>  -->
+                                <%if (task.arm != null && task.arm != "") { %>
+                                    <b> <%= task.arm %></b> arm
+                                <% } %> 
+                                <%if (task.object != null && task.object != "") { %>
+                                    to object <b><%= task.object %></b>
+                                <% } %> 
+                               <!--  <%if (task.grasp_effort != null && task.grasp_effort != "" && task.tools.indexOf("grasp_effort") == -1) { %>
+                                    Grasp Effort: <%= task.grasp_effort %><br>
+                                <% } %>  -->
+    <!-- 
+                                <%if (task.orientation != null && task.orientation != "" && task.tools.indexOf("orientation") == -1) { %>
+                                    Orientation: <%= task.orientation %><br>
+                                <% } %> 
+                                <%if (task.angle != null && task.angle != "" && task.tools.indexOf("angle") == -1) { %>
+                                    Angle: <%= task.angle %><br>
+                                <% } %>  -->
+                              <!--   <%if (task.location != null && task.location != "" && task.tools.indexOf("location") == -1) { %>
+                                    Location: <%= task.location %><br>
+                                <% } %>  -->
+    <!--                             <%if (task.size != null && task.size != "" && task.tools.indexOf("size") == -1) { %>
+                                    Size: <%= task.size %> <br>
+                                <% } %> <%if (task.relativeX != null && task.relativeX != "" && task.tools.indexOf("relativeX") == -1) { %>
+                                    RelativeX: <%= task.relativeX %><br>
+                                <% } %> <%if (task.relativeY != null && task.relativeY != "" && task.tools.indexOf("relativeY") == -1) { %>
+                                    RelativeY: <%= task.relativeY %><br>
+                                <% } %> <%if (task.relativeZ != null && task.relativeZ != "" && task.tools.indexOf("relativeZ") == -1) { %>
+                                    RelativeZ: <%= task.relativeZ %><br>
+                                <% } %> <%if (task.max_joint_vel != null && task.max_joint_vel != "" && task.tools.indexOf("max_joint_vel") == -1) { %>
+                                    Max Joint Velocity: <%= task.max_joint_vel %><br>
+                                <% } %>  <%if (task.order_number != null && task.order_number != "" ) { %>
+                                    Order Number: <%= task.order_number %><br> -->
+    <!--                             <% } %> <%if (task.short_id != null && task.short_id != "") { %>
+                                    Short ID: <%= task.short_id %><br>
+                                <% } %>-->
+                            </p>
+                                <!-- Skills: <%= task.skills %><br>Tools: <%= task.tools %><br>Parents: <%= task.parents %><br>Arm: <%= task.arm %><br>Grasp Effort: <%= task.grasp_effort %><br>Object: <%= task.object %><br>Orientation: <%= task.orientation %><br>Angle: <%= task.angle %><br>Position: <%= task.positon %><br>Size: <%= task.size %><br>RelativeX <%= task.relativeX %><br>RelativeY: <%= task.relativeY %><br>RelativeZ: <%= task.relativeZ %></p> -->
+                            </div>
+      <!--                       <div style="position:relative">
+                               <table style="width:100%;">
+                                  <tr >
+                                    <td style="width:80px;">
+                                        <div style="height:70px;">  
+                                        </div>
+                                        <% task.skills.forEach( function( skill ){ %>
+                                            <div class="skills-arrow"> <%= skill %> <%= task[skill] %>
+                                            </div>
+                                        <% }); %>
+                                    </td>
+                                    <td style="width:40px;background:gray">
+                                    </td> 
+                                    <td style="width:80px">
+                                        <div style="height:90px"> 
+                                        </div>
+                                        <% task.tools.forEach( function( tool ){ %>
+                                            <div class="tools-arrow"> <%= tool %> <%= task[tool] %>
+                                            </div>
+                                        <% }); %>
+                                    </td>
+                                  </tr>
+                                  
+                                </table> -->
+                    </div>

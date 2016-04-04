@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+    <div id="<%= task.id %>" class="task therblig alltasks" style="float:left;position:static;"> 
+        <div>
+          <a href="/destroy/<%= task.id %>" title="Delete"><image src="images/delete.png" height="20px"></a>
+          <script> var tasks2 = <%- JSON.stringify(tasks) %> </script>
+          <a onclick="editTask(this, tasks2)" title="Edit" id="<%= task.id %>"><image src="images/edit.png" height="20px"></a>
+        </div>
+        <div style="border-style:solid;background:white">
+
+            <p style="text-align:center;font-size:large;font-weight:bold;"><%-task.descript%></p>
+
+            <%if (task.descript == "transport_empty") { %>
+                <b> <%= task.arm %></b> arm to object <b><%= task.object %></b>
+            <% } %>
+            <%if (task.descript == "grasp") { %>
+                <b> <%= task.arm %></b> arm
+            <% } %>
+            <%if (task.descript == "transport_loaded") { %>
+                <b> <%= task.arm %></b> arm to location <b><%= task.location %></b>
+            <% } %>
+            <%if (task.descript == "position") { %>
+                <b> <%= task.arm %></b> arm to orientation <b><%= task.orientation %></b>, angle <b> <%= task.angle %></b>
+            <% } %>
+            <%if (task.descript == "release_load") { %>
+                <b> <%= task.arm %></b> arm %></b>
+            <% } %>
+            <%if (task.descript == "movebase") { %>
+                to <b><%= task.relative_x %></b>,<b><%= task.relative_y %></b>,<b><%= task.relative_z %></b>
+            <% } %>
+            <%if (task.descript == "retract") { %>
+                <b> <%= task.arm %></b> arm %></b>
+            <% } %>
+            <%if (task.descript == "use_breaker") { %>
+                <b> <%= task.arm %></b> arm %></b>
+            <% } %>
+            <%if (task.descript == "select") { %>
+                object <b><%= task.object %></b>
+            <% } %>
+            <%if (task.descript == "preposition") { %>
+                 <b> <%= task.arm %></b> arm
+            <% } %>
+            <%if (task.descript == "rest") { %>
+                duration <b> <%= task.object %></b>
+            <% } %>
+            <%if (task.descript == "hold") { %>
+                duration <b> <%= task.object %></b>
+            <% } %>
+
+        </div>
+    </div>
+</html>

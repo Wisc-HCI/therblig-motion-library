@@ -1,0 +1,18 @@
+0 0 0
+0.650 0.236 0.940		// where red small goes
+0.521 0.232 0.903		// where red big goes
+0.629 -0.205 0.940		// where yellow small goes
+0.510 -0.201 0.940 		// where yellow big goes
+
+
+
+
+// Enable this for demo
+// 0.592 0.215 0.877   // object 1 bridge place
+
+
+// BACKUP - STANDARD
+// 0.650 0.236 0.940		// where red small goes
+// 0.521 0.232 0.903		// where red big goes
+// 0.629 -0.205 0.940		// where yellow small goes
+// 0.510 -0.201 0.940 		// where yellow big goes

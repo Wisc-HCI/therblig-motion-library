@@ -1,0 +1,448 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Task Planner for a Collaborative Robot</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link href="stylesheets/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+    <!-- Custom CSS -->
+    
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+    </style>
+    <!-- Style that should go in a separate file at some point -->
+
+    
+        <!-- jQuery Version 1.11.1 -->
+    <script src="javascripts/jquery.js"></script>
+    <!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="javascripts/bootstrap.min.js"></script>
+    
+    
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Model</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="refine">Refine</a>
+                    </li>
+                    <li>
+                        <a href="#">Train</a>
+                    </li>
+                    <li>
+                        <a href="#">Present</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+  <div id="wrapper">
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a title="Exit_Edit" onclick='$("#wrapper").toggleClass("toggled");'><image src="images/delete.png" height="20px"></a>
+                <li class="sidebar-brand">
+                    <a >
+                        Edit Task
+                    </a>
+
+                </li>
+
+            <form action="/update" method="post" accept-charset="utf-8" style="clear:both" id="edit-form">
+            <div id="editTask_Id" >
+                ID: <br>
+                    <input type="text" name="id" id="editTask_id"/> <br>
+            </div>
+            <div id="editTask_descript">
+                Description: <br>
+                    <input type="text" name="descript" id="editTask_form_descript" value=""/> <br>
+            </div>
+            <div id="editTask_arm" class="editTask_robo_param">
+                Arm: <br>
+                    <input type="text" name="arm" id="editTask_form_arm" value="left"/> <br>
+            </div>
+            <div id="editTask_duration" class="editTask_robo_param">
+                Duration: <br>
+                    <input type="text" name="duration" id="editTask_form_duration" /> <br>
+            </div>
+            <div id="editTask_grasp_effort" class="editTask_robo_param">
+                Grasp Effort: <br>
+                    <input type="number" name="grasp_effort" id="editTask_form_grasp_effort" /> <br>
+            </div>
+            <div id="editTask_object" class="editTask_robo_param">
+                Object: <br>
+                    <input type="number" name="object" id="editTask_form_object" /> <br>
+            </div>
+            <div id="editTask_orientation" class="editTask_robo_param">
+                Orientation: <br>
+                    <input type="number" name="orientation" id="editTask_form_orientation"/> <br>
+            </div>
+            <div id="editTask_angle" class="editTask_robo_param">
+                Angle: <br>
+                    <input type="number" name="angle" id="editTask_form_angle" /> <br>
+            </div>
+            <div id="editTask_location" class="editTask_robo_param">
+                Location: <br>
+                    <input type="number" name="location" id="editTask_form_location" /> <br>
+            </div>
+            <div id="editTask_size" class="editTask_robo_param">
+                Size: <br>
+                    <input type="number" name="size" id="editTask_form_size"/> <br>
+            </div>
+            <div id="editTask_relativeX" class="editTask_robo_param">
+                Relative X: <br>
+                    <input type="number" name="relativeX" id="editTask_form_relativeX" /> <br>
+            </div>
+            <div id="editTask_relativeY" class="editTask_robo_param">
+                Relative Y: <br>
+                    <input type="number" name="relativeY" id="editTask_form_relativeY"/> <br>
+            </div>
+            <div id="editTask_relativeZ" class="editTask_robo_param">
+                Relative Z: <br>
+                    <input type="number" name="relativeZ" id="editTask_form_relativeZ" /> <br>
+            </div>
+            <div id="editTask_max_joint_vel" class="editTask_robo_param">
+                Max Joint Velocity: <br>
+                    <input type="number" name="max_joint_vel" id="editTask_form_max_joint_vel" /> <br>
+            </div>
+<!--             Skills: <br>
+                <input type="checkbox" name="skills[]" value="move" id="editTask_form_skills_move"> Move
+                <br>
+                <input type="checkbox" name="skills[]" value="rotate" id="editTask_form_skills_rotate"> Rotate
+                <br>
+            Tools: <br>
+                <input type="checkbox" name="tools[]" value="rotator"> Rotator
+                <br>
+                <input type="checkbox" name="tools[]" value="fastener"> Fastener
+                <br> -->
+<!--             Parents: <br>
+                <% tasks.forEach( function( task ){ %>
+                    <input type="checkbox" name="parents[]" value="<%= task.id %>"> <%= task.descript %> <%= task.short_id %>
+                    <br>
+                <% }); %> -->
+            <!-- </div> -->
+            <input type="submit" value="Submit">
+        </form>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div class="container" id = "#page-content-wrapper">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Task Planner for a Collaborative Robot </h1>
+ <!--                <p class="lead">This is the model tab. You can input and edit tasks, reorder them, import & export a series of tasks, and save the current ordering of tasks. </p> -->
+            </div>
+        </div>
+        <br>
+        <!-- /.row -->
+        <div id="my_container" class ="container-fluid">
+<!--             <div style="width:100px;height:auto;float:left">
+                <br> <br> <br> 
+                <div class="header_rotate" style="font-size:x-large;width:100px;"> <p>  </p></div>
+                <br><br><br><br><br><br><br><br> 
+                <div class="header_rotate" style="font-size:x-large;width:100px"> <p>  </p></div>
+            </div> -->
+            <div class="task-steps" style="overflow-x:scroll;overflow-y:visible;height:550px">
+                <div style="width:5000px;overflow-y:visible" class="sortable"> <!-- TODO: this width / overflow thing is a little hacky -->
+                <!-- <p> Tasks </p> -->
+
+
+                <% tasks.forEach( function( bigtask ){ %>
+                    <% if (bigtask.is_supertask == "true") { %>
+                         <div class="connectedSortable bigtask alltasks" id=<%=bigtask.id%> style="left:<%=task.order_number%>">
+                            <a href="/destroy/<%= bigtask.id %>" title="Delete"><image src="images/delete.png" height="20px"></a><p style="text-align:center;font-size:large;font-weight:bold;"><%=bigtask.descript %> </p> 
+                             
+                                <% tasks.forEach( function( task ){ %>
+                                <% if (task.parents[0] == bigtask._id ) { %>
+                                    <%- include('task_new', {task: task}) %>   
+                                    <% } %>                 
+                                <% }); %>
+                        </div>
+                    <% } %>                 
+                <% }); %>
+                     
+                    
+                <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div id="template_wrapper">
+            <div id="template_transport_emtpy" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> transport_empty </p>
+                        left arm to object 1
+                </div>
+            </div>
+            <div id="template_grasp" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> grasp </p>
+                        left arm 
+                </div>
+            </div>
+            <div id="template_transport_loaded" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> transport_loaded </p>
+                        left arm to location 1
+                </div>
+            </div>
+            <div id="template_position" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> position </p>
+                        left arm
+                </div>
+            </div>
+            <div id="template_release_load" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> release_load </p>
+                        left arm
+                </div>
+            </div>
+            <div id="template_select" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> select </p>
+                        object 0
+                </div>
+            </div>
+            <div id="template_preposition" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> preposition </p>
+                        left arm
+                </div>
+            </div>
+            <div id="template_rest" class=" therblig-template" style="float:left;position:static;"> 
+                <div style="border-style:solid;background:white">
+                    <p style="text-align:center;font-size:large"> rest </p>
+                        duration 1
+                </div>
+            </div>
+        </div>
+<!--         <div id="template_movebase" class=" therblig-template" style="float:left;position:static;"> 
+            <div style="border-style:solid;background:white">
+                <p style="text-align:center;font-size:large"> movebase </p>
+                    to 0,0,0
+            </div>
+        </div>
+        <div id="template_retract" class=" therblig-template" style="float:left;position:static;"> 
+            <div style="border-style:solid;background:white">
+                <p style="text-align:center;font-size:large"> retract </p>
+                    left arm
+            </div>
+        </div>
+        <div id="template_use_breaker" class=" therblig-template" style="float:left;position:static;"> 
+            <div style="border-style:solid;background:white">
+                <p style="text-align:center;font-size:large"> use_breaker </p>
+                    left arm
+            </div>
+        </div> -->
+
+
+
+        <br><br><br>
+ <!--        <form action="/create" method="post" accept-charset="utf-8" style="clear:both" class="form-horizontal col-sm-6" id="myBigForm">
+            <div class="form-group"> 
+            <label class="control-label " for="inputError">Task Description</label>
+                <select id="task-choice" name="descript" class="form-control" >
+
+                    <script>
+                    $.getJSON("json_data/message_lookup.json", function(data) { 
+                        for (key in data){
+                            document.getElementById("task-choice").innerHTML = document.getElementById("task-choice").innerHTML + "<option value='"+key+"'>"+key+"</option>";
+                        }
+                    });
+                    </script>
+                </select>
+            </div>
+            <div id="arm" class="robo_param form-group">
+                <label class="control-label" for="inputError">Arm</label>
+                    <select name="arm" class="form-control">
+                    <option value='left'> Left</option>
+                    <option value='right'> Right</option></select>
+            </div>
+            <div id="grasp_effort" class="robo_param form-group">
+                <label class="control-label" for="inputError">Grasp Effort</label> 
+                <span for="inputError" class="form-control-feedback-text"> must be between 0 and 100, inclusive. </span>
+                    <input type="number" name="grasp_effort" class="form-control" value="100"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback"> </span> 
+            </div>
+            <div id="object" class="robo_param form-group">
+                <label class="control-label" for="inputError">Object</label>
+                <span for="inputError" class="form-control-feedback-text"> is a required field. </span>
+                    <input type="number" name="object" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="orientation" class="robo_param form-group">
+                <label class="control-label" for="inputError">Orientation</label>
+                <span for="inputError" class="form-control-feedback-text"> can be either 0 or 1, for now. </span>
+                    <input type="number" name="orientation" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span> 
+            </div>
+            <div id="angle" class="robo_param form-group">
+                <label class="control-label" for="inputError">Angle</label>
+                <span for="inputError" class="form-control-feedback-text"> can be 0, 1, or 2 for now. </span>
+                    <input type="number" name="angle" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="location" class="robo_param form-group">
+                <label class="control-label" for="inputError">Location</label>
+                <span for="inputError" class="form-control-feedback-text"> is a required field. </span>
+                    <input type="number" name="location" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="size" class="robo_param form-group">
+                <label class="control-label" for="inputError">Size</label>
+                <span for="inputError" class="form-control-feedback-text"> is a required field. </span>
+                    <input type="number" name="size" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="relativeX" class="robo_param form-group">
+                <label class="control-label" for="inputError">Relative X</label>
+                    <input type="number" name="relativeX" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="relativeY" class="robo_param form-group">
+                <label class="control-label" for="inputError">Relative Y</label>
+                <span for="inputError" class="form-control-feedback-text"> is a required field. </span>
+                    <input type="number" name="relativeY" class="form-control" value="0"/> 
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="relativeZ" class="robo_param form-group">
+                <label class="control-label" for="inputError">Relative Z</label>
+                <span for="inputError" class="form-control-feedback-text"> is a required field. </span>
+                    <input type="number" name="relativeZ" class="form-control" value="0"/>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div id="max_joint_vel" class="robo_param form-group">
+                <label class="control-label" for="inputError">Max Joint Velocity</label>
+                <span for="inputError" class="form-control-feedback-text"> is a required field. </span>
+                    <input type="number" name="max_joint_vel" class="form-control" value="100"/>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span> 
+            </div>
+            <div class="checkbox">
+            <b>Skills</b> <br>
+                <label><input type="checkbox" name="skills[]" value="move" > Move </label>
+                <br>
+                <label><input type="checkbox" name="skills[]" value="rotate" > Rotate </label>
+                <br>
+            </div>
+
+            <div class="checkbox">
+            <b>Parents</b> <br>
+                <% tasks.forEach( function( task ){ %>
+                    <label><input type="checkbox" name="parents[]" value="<%= task.id %>"> <%= task.descript %> <%= task.short_id %></label>
+                    <br>
+                <% }); %>
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+        </form>  -->
+<br><br><br><br><br><br><br>
+                <!-- <form action="/sendtasks" method="post" accept-charset="utf-8" style="clear:both"> -->
+                    <button onclick="createSupertask()">Create New Supertask</button> named <input type="text" name="supertask_name" id="supertask_name_input"/> <br>
+                <!-- </form> --> 
+        <div > <!-- <b>Actions Menu </b> -->
+<!--             <div>
+                <a href="/exports" title="Exports">Export All Tasks</a>
+            </div>
+            <div>
+                <a href="/imports" title="Imports">Import All Tasks</a>
+            </div> -->
+            <div>
+                <!-- action="/sendtasks" method="post" -->
+                <form  action="/sendtasks" method="post" accept-charset="utf-8" style="clear:both" id="sendTasks_form">  <br>
+                    <input type="submit" value="Send Tasks"> to IP <input type="text" name="ip_destination" id="ip_destination_input" value="128.31.35.87"/> 
+                </form>
+                <!-- <a href="/sendtasks" title="SendTasks">Send Tasks to Robot</a> -->
+<br>            </div>
+            <div>
+                <a onclick="saveWorkspace()" title="SaveWorkspace">Save Workspace</a> <br>
+            </div>
+
+            <br style="clear:both">
+            <button onclick="taskInventory()">Get Task Inventory</button>
+            <br>
+
+            <div ID="taskInventoryList">
+                List starts here
+            </div>
+           <!--  <br> Times for Each Task <br>
+            <% times.forEach( function( time ){ %>
+                <%= time %> <br>
+            <%});%> -->
+        </div>
+
+</div>
+    <!-- /.container -->
+
+<script src= "./index_fe.js"></script>
+
+
+ <!-- Uncomment me if you want the IP input box to be prepopulated with the user's IP -->
+<!-- 
+<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
+<script>
+console.log(myip);
+$("#ip_destination_input").val(myip);
+</script>
+-->
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+    <!-- Custom CSS -->
+    
+    <style>
+#makeMeDraggable { width: 300px; height: 300px; background: red; }
+</style>
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+    </style>
+    <!-- Style that should go in a separate file at some point -->
+    <style>
+        .draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em;};
+        .ui-widget-header p, .ui-widget-content p { margin: 0; }
+        #snaptarget { height: 140px;}
+    </style>
+    
+        <!-- jQuery Version 1.11.1 -->
+    <script src="javascripts/jquery.js"></script>
+<!--    <script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    
+    <!-- Script that should go in a separate file at some point -->
+    <script>
+      $(function() {
+        $( ".draggableDiv" ).draggable({ axis: "x" });//.draggable({ snap: ".ui-widget-header", snapMode: "inner" });
+      });
+        
+          $(document).ready(function(){
+            $('#AddDiv').click(function(){
+               $('#draggables').append(            "<div id='draggable3' class='draggable ui-widget-content draggableDiv'><p>I only snap to the innner edges of the big boxes</p></div>");
+            });
+          });
+//        $("input[type=submit]").click(function(){
+//            $('#draggables').append('<div>the new guy</div>');
+//        }) 
+    </script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Model</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="refine">Refine</a>
+                    </li>
+                    <li>
+                        <a href="#">Train</a>
+                    </li>
+                    <li>
+                        <a href="#">Present</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Hello! </h1>
+                <p class="lead">This is the refine tab.</p>
+                <ul class="list-unstyled">
+                    <li>Bootstrap v3.3.1</li>
+                    <li>jQuery v1.11.1</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div id="snaptarget" class="ui-widget-header">
+            <p> Task Steps</p>
+        </div>
+        
+        <div id="snaptarget" class="ui-widget-header">
+            <p> Skills and Tools </p>
+        </div>
+                
+        <br style="clear:both">
+
+        <form action="/create" method="post" accept-charset="utf-8">
+          <!-- Agent: (robot or human)<br>
+          <input type="text" name="agent" /> <br> -->
+          Type: (grasp, ungrasp, etc.)<br>
+          <input type="text" name="mytype" /> <br>
+          Duration: <br>
+          <input type="text" name="duration" /> <br><br>
+          <input type="submit" value="Submit">
+        </form> <br> <br>
+
+        <div id="draggables" >
+            <div id="draggable3" class="draggable ui-widget-content draggableDiv">
+                <p>I am an example draggable task.</p>
+            </div>
+        </div>
+
+    <!-- // use a loop to show all todo items at the very bottom. -->
+        <% tasks.forEach( function( task ){ %>
+            <div id="draggable3" class="draggable ui-widget-content draggableDiv">
+                <p><%= task.id %>, <%= task.agent %>, <%= task.type %>, <%= task.duration %></p>
+            </div>
+        <% }); %>
+        
+
+    </div>
+    <!-- /.container -->
+
+
+
+
+</body>
+
+</html>

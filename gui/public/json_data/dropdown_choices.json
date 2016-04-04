@@ -1,0 +1,12 @@
+{
+  "_comment": "This file is now defunct. Refer to message_lookup.json for dropdown choices.",
+  "transport_empty": "arm",
+  "transport_loaded": "arm",
+  "grasp": "arm,grasp_effort",
+  "position": "arm",
+  "release_load": "arm",  
+  "movebase": "arm",
+  "retract": "arm",
+  "use_breaker": "arm",
+  "end_msg": "arm",
+}

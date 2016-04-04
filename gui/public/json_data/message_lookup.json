@@ -1,0 +1,107 @@
+{
+  "transport_empty": {
+    "messageTypeCode": 0,
+    "parameters": {
+        "object": 4,
+        "orientation":4,
+        "angle": 4,
+        "arm": 4,
+        "max_joint_vel": 4
+    }
+  },
+  "transport_loaded": {
+    "messageTypeCode": 1,
+    "parameters": {
+        "location": 4,
+        "arm": 4,
+        "max_joint_vel": 4
+    }
+  },
+  "grasp": {
+    "messageTypeCode": 2,
+    "parameters": {          
+        "grasp_effort": 4,
+        "arm": 4
+    }
+  },
+  "position": {
+    "messageTypeCode": 3,
+    "parameters": {
+        "orientation": 4,
+        "angle": 4,
+        "arm": 4,
+        "max_joint_vel": 4
+    }
+  },
+  "release_load": {
+    "messageTypeCode": 4,
+    "parameters": {
+        "arm": 4
+    }
+  },  
+  "movebase": {
+    "messageTypeCode": 5,
+    "parameters": {
+        "relativeX": 8,
+        "relativeY": 8,
+        "relativeZ": 8
+    }
+  },
+  "retract": {
+    "messageTypeCode": 6,
+    "parameters": {
+        "arm": 4,
+        "max_joint_vel": 4
+    }
+  },
+  "use_breaker": {
+    "messageTypeCode": 7,
+    "parameters": {
+        "size": 4,
+        "arm": 4
+    }
+  },
+  "pick_and_place": {
+    "messageTypeCode": 8,
+    "parameters": {
+        "object": 4,
+        "orientation":4,
+        "angle": 4,
+        "arm": 4,
+        "max_joint_vel": 4,
+        "grasp_effort": 4,
+        "location": 4
+    }
+  },
+  "select": {
+    "messageTypeCode": 9,
+    "parameters": {
+        "object": 4
+    }
+  },
+  "preposition": {
+    "messageTypeCode": 10,
+    "parameters": {
+        "orientation": 4,
+        "angle": 4,
+        "arm": 4,
+        "max_joint_vel": 4
+    }
+  },
+  "hold": {
+    "messageTypeCode": 11,
+    "parameters": {
+        "duration": 4,
+        "grasp_effort": 4
+    }
+  },
+  "rest": {
+    "messageTypeCode": 12,
+    "parameters": {
+        "duration": 4
+    }
+  }
+}
+
+
+
