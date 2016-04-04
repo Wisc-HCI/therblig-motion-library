@@ -1,6 +1,6 @@
-## Instructions on running the PR2
+## Therblig Motion Library for PR2 Robot 
 
-This package contains two servers for interacting with the pr2. The first is the 'reciever' executable, which takes in low- level commands to the pr2 and drives the pr2 accordingly. The second server, 'high_level_reciever', can be run on top on the first. This takes in higher level motion commands, parses them, and passes them down to the low-level 'reciever' server. 
+This package contains two servers for interacting with the pr2. The first is the 'reciever' executable, which takes in low- level commands to the pr2 and drives the pr2 accordingly. The second server, 'high_level_reciever', can be run on top on the first. This takes in higher level Therblig commands, parses them, and passes them down to the low-level 'reciever' server. 
 
 ##Folders:
 pr2lib -- this folder <br />
@@ -50,13 +50,13 @@ Then run the following:
 `rosrun pr2lib gripper.py`   // change static position of the head <br />
 `rosrun pr2lib torso.py`   // change height of the robot <br />
 
-#### Server:
+#### Running the Servers:
 There are two ways to use this package, one to parse only low level commands, and one to parse high level commands as well. Run the following commands in sequence on separate terminals.
 
 `roslaunch pr2lib pr2scripts.launch`  //runs some needed pr2 scripts for IK  <br />
-`roslaunch pr2lib nodes.launch`   //use this option if you want to have high level parsing available.  Once you do this, you should the left arm retract.   <br />
+`roslaunch pr2lib nodes.launch`   //use this option if you want to have high level parsing available.  Once you do this, you should see the left arm retract.   <br />
 
-OR instead of those two, run:
+If you only want to run the low level server, run the following line instead of `roslaunch pr2lib nodes.launch` :
 
 `roslaunch pr2lib low_level_nodes.launch` //use this option if you only want low level parsing 
 
@@ -106,12 +106,15 @@ Now the robot is ready to receive sequences from the authoring environment:<br /
 `rosrun pr2lib high_level_test_input`  //test high level controller  <br />
 
 #### RViz topic for object / location position
-l_gripper_motor_accelerometer_link
+`l_gripper_motor_accelerometer_link`
 
-## LOW LEVEL ICD: 
+##Socket Interface:
+**Both of the servers in this package use TCP connections. This section contains two ICD's (Interface Control Documents) that specify the interfaces presented by the high level and low level servers. When this package is run, the low level reciever connects to the PR2 via ROS (this interface is not described here), and runs a server with the low level ICD described below. Clients can connect to this server directly and manipulate the robot. When the high level reciever is run, it first connects to the low level reciever when is running the low level ICD. The high level reciever then runs a server with the high level ICD, described below. Clients, including the Therblig GUI this package was designed for, can connect to this server and send therblig commands to the PR2.**
+
+### LOW LEVEL ICD: 
 **Port 8888. Each message is a 'header + (gripper | arm | twist | end_msg | rotate | driveForward)'. Note that the message type must align with the type of message being sent. Note that some of these structs are defined in the high level ICD below.**
 
-**At the moment, twist messages are not implemented due to difficulty using the arm with the navigation stack. Instead, use the naviation free rotate and driveForward messages.**
+**At the moment, twist messages are not implemented due to difficulty using the arm with the navigation stack. Instead, use the naviation free rotate and driveForward messages. Note that rotate and driveForward are not part of the therblig library, and are provided simply for the convenience of a client who wishes to orient the PR2.**
 
 header: <br />
 -short check <br />
@@ -145,9 +148,9 @@ twist:<br />
 -float angularX;<br />
 -float angularY;<br />
 -float angularZ; <br />
- 
 
-##HIGH LEVEL ICD: 
+
+###HIGH LEVEL ICD: 
 **Port 9999. This server expects a sequence of command messages followed by an end command. After the end command is recieved and the simulation finishes, it will send a reply elapsedTime message indicating the time between the first command starting and the last command finishing. Note that the simulator will start executing commands as soon as the first command is passed. Each command message is of the form 'command_header + (transport_empty | transport_loaded | grasp | position | release_load | movebase | rotate | driveForward)'. Those definitions can be found in the structs below, and have little endianess (most common).**
 
 **The sequence number of a header and the following message must align. However, it is not checked that sequential messages have sequential sequence numbers.**
@@ -223,28 +226,3 @@ driveForward:<br />
 -int seq_number;<br />
 -double distance; <br />
 
- 
-
-##Navigation Stack:
-**This section is not complete and not currently used in the package.**
-
-Installation: 
--go to https://github.com/PR2/pr2_navigation_apps and download and extract the zip<br />
--add the extracted folder to the ROS package path<br />
-`rosmake pr2_2dnav_local`
-
-
-##Random Stuff:
-
-`rostopic pub r_gripper_controller/command pr2_controllers_msgs/Pr2GripperCommand "{position: 0.06, max_effort: 100.0}"`
-http://www.pythonprasanna.com/Papers%20and%20Articles/Sockets/udpserver.c
-http://www.pythonprasanna.com/Papers%20and%20Articles/Sockets/udpclient.c
-
-
-`rosservice call /execute_cartesian_ik_trajectory -- "{header: { frame_id: /base_link}, poses: [{position: [0.76, -0.19, 0.83], orientation:[0.02, 0.09, 0.0, 1.0]}]}"`
-
-Navigation stack <br />
-`rosmake pr2_navigation_perception pr2_navigation_teleop pr2_navigation_global fake_localization amcl map_server` <br />
-
-Good tutorial on sample movements <br />
-https://pr2s.clearpathrobotics.com/wiki/Tutorials/MovingMechanism
