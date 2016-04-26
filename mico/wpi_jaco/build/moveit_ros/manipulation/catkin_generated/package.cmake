@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "moveit_ros_manipulation")
+set(moveit_ros_manipulation_MAINTAINER "Ioan Sucan <isucan@gmail.com>, Michael Ferguson <mferguson@fetchrobotics.com>, Sachin Chitta <robot.moveit@gmail.com>")
+set(moveit_ros_manipulation_DEPRECATED "")
+set(moveit_ros_manipulation_VERSION "0.6.5")
+set(moveit_ros_manipulation_BUILD_DEPENDS "actionlib" "dynamic_reconfigure" "moveit_core" "moveit_ros_move_group" "moveit_ros_planning" "moveit_msgs" "roscpp" "rosconsole" "tf" "pluginlib" "household_objects_database_msgs" "manipulation_msgs" "cmake_modules")
+set(moveit_ros_manipulation_RUN_DEPENDS "actionlib" "dynamic_reconfigure" "moveit_core" "moveit_ros_move_group" "moveit_ros_planning" "moveit_msgs" "roscpp" "rosconsole" "tf" "pluginlib" "household_objects_database_msgs" "manipulation_msgs")
+set(moveit_ros_manipulation_BUILDTOOL_DEPENDS "catkin")

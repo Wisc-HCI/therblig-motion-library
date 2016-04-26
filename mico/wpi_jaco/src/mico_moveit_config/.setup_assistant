@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mico_description
+    relative_path: robots/standalone_arm_CB.urdf.xacro
+  SRDF:
+    relative_path: config/mico.srdf
+  CONFIG:
+    generated_timestamp: 1447864838

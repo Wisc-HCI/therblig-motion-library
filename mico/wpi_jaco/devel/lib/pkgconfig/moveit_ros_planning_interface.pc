@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
+
+Name: moveit_ros_planning_interface
+Description: Description of moveit_ros_planning_interface
+Version: 0.6.5
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_ros/planning_interface/py_bindings_tools/include -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_ros/planning_interface/common_planning_interface_objects/include -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_ros/planning_interface/planning_scene_interface/include -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_ros/planning_interface/move_group_interface/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib -lmoveit_common_planning_interface_objects -lmoveit_planning_scene_interface -lmoveit_move_group_interface
+Requires: moveit_ros_planning moveit_ros_warehouse moveit_ros_manipulation moveit_ros_move_group

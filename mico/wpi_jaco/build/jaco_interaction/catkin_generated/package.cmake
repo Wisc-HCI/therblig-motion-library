@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jaco_interaction")
+set(jaco_interaction_MAINTAINER "David Kent <davidkent@wpi.edu>, Russell Toris <rctoris@wpi.edu>")
+set(jaco_interaction_DEPRECATED "")
+set(jaco_interaction_VERSION "0.0.22")
+set(jaco_interaction_BUILD_DEPENDS "roscpp" "actionlib" "interactive_markers" "rail_manipulation_msgs" "sensor_msgs" "std_srvs" "wpi_jaco_msgs")
+set(jaco_interaction_RUN_DEPENDS "interactive_markers" "roscpp" "actionlib" "rail_manipulation_msgs" "sensor_msgs" "std_srvs" "wpi_jaco_msgs")
+set(jaco_interaction_BUILDTOOL_DEPENDS "catkin")

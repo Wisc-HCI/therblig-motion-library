@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "moveit_controller_manager_example")
+set(moveit_controller_manager_example_MAINTAINER "Ioan Sucan <isucan@gmail.com>")
+set(moveit_controller_manager_example_DEPRECATED "")
+set(moveit_controller_manager_example_VERSION "0.5.6")
+set(moveit_controller_manager_example_BUILD_DEPENDS "moveit_core" "pluginlib" "roscpp")
+set(moveit_controller_manager_example_RUN_DEPENDS "moveit_core" "pluginlib" "roscpp")
+set(moveit_controller_manager_example_BUILDTOOL_DEPENDS "catkin")

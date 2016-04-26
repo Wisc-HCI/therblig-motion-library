@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: wpi_jaco_msgs
+Description: Description of wpi_jaco_msgs
+Version: 0.0.22
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib 
+Requires: actionlib_msgs geometry_msgs

@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
+
+Name: moveit_resources
+Description: Description of moveit_resources
+Version: 0.5.0
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_resources/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib 
+Requires: 

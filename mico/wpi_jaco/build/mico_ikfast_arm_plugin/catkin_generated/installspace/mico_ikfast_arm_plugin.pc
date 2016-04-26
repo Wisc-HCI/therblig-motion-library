@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: mico_ikfast_arm_plugin
+Description: Description of mico_ikfast_arm_plugin
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib 
+Requires: moveit_core pluginlib roscpp tf_conversions

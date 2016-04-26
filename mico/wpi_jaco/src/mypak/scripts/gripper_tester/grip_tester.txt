@@ -1,0 +1,4 @@
+ >NAME	>POSITION
+ >Grasp50	>50
+ >Grasp75	>75
+ >Grasp100	>100

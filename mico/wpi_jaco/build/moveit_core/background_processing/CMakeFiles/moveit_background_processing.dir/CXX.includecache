@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_core/background_processing/include/moveit/background_processing/background_processing.h
+deque
+-
+string
+-
+boost/thread.hpp
+-
+boost/function.hpp
+-
+boost/scoped_ptr.hpp
+-
+boost/noncopyable.hpp
+-
+
+/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_core/background_processing/src/background_processing.cpp
+moveit/background_processing/background_processing.h
+-
+console_bridge/console.h
+-
+

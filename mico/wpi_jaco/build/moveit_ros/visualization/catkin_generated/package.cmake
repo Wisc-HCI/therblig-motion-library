@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "moveit_ros_visualization")
+set(moveit_ros_visualization_MAINTAINER "Ioan Sucan <isucan@google.com>, Michael Ferguson <mferguson@fetchrobotics.com>")
+set(moveit_ros_visualization_DEPRECATED "")
+set(moveit_ros_visualization_VERSION "0.6.5")
+set(moveit_ros_visualization_BUILD_DEPENDS "roscpp" "rviz" "moveit_ros_planning_interface" "moveit_ros_warehouse" "moveit_ros_robot_interaction" "pluginlib" "interactive_markers" "geometric_shapes" "object_recognition_msgs" "moveit_ros_perception" "cmake_modules" "rospy")
+set(moveit_ros_visualization_RUN_DEPENDS "roscpp" "rviz" "moveit_ros_planning_interface" "moveit_ros_warehouse" "moveit_ros_robot_interaction" "pluginlib" "interactive_markers" "geometric_shapes" "object_recognition_msgs" "moveit_ros_perception" "rospy")
+set(moveit_ros_visualization_BUILDTOOL_DEPENDS "catkin" "pkg-config")

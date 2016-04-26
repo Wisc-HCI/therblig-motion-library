@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: jaco_moveit_config
+Description: Description of jaco_moveit_config
+Version: 0.0.22
+Cflags: 
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib 
+Requires: 

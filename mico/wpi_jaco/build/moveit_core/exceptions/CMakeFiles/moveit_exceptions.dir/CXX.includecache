@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_core/exceptions/include/moveit/exceptions/exceptions.h
+stdexcept
+-
+
+/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_core/exceptions/src/exceptions.cpp
+moveit/exceptions/exceptions.h
+-
+console_bridge/console.h
+-
+

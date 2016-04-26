@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: moveit_commander
+Description: Description of moveit_commander
+Version: 0.5.7
+Cflags: 
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib 
+Requires: 

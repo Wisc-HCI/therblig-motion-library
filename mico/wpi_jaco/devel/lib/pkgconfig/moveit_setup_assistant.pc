@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
+
+Name: moveit_setup_assistant
+Description: Description of moveit_setup_assistant
+Version: 0.6.0
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_setup_assistant/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib -lmoveit_setup_assistant_tools
+Requires: moveit_ros_planning moveit_ros_visualization

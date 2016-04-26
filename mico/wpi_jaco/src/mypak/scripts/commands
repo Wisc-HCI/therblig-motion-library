@@ -1,0 +1,2101 @@
+bash: drakita/ros/legibilityStudy/devel/setup.sh: No such file or directory
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco$ clear
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco$ cd src/mypak/scripts/
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   plans            save_pos.py
+actions.pyc       mico_gripperControl.pyc  run_plans.py     TE_all.txt
+dump              mico_server.py           run_plans.sh     TERall.txt
+examplePickUp.sh  mico_server.py~          saved_plans.txt  TLDall.txt
+gripper_tester    oldfiles                 saved_pos.txt    TLUall.txt
+kitting.py        oldtxt                   saved_pos.txt~
+mico_client.py    pick_and_place.py        save_plans.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   plans            save_pos.py
+actions.pyc       mico_gripperControl.pyc  run_plans.py     TE_all.txt
+dump              mico_server.py           run_plans.sh     TERall.txt
+examplePickUp.sh  mico_server.py~          saved_plans.txt  TLDall.txt
+gripper_tester    oldfiles                 saved_pos.txt    TLUall.txt
+kitting.py        oldtxt                   saved_pos.txt~
+mico_client.py    pick_and_place.py        save_plans.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ rm *~
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cleqr
+No command 'cleqr' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+cleqr: command not found
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_client.py           pick_and_place.py  save_plans.py
+actions.pyc       mico_gripperControl.py   plans              save_pos.py
+dump              mico_gripperControl.pyc  run_plans.py       TE_all.txt
+examplePickUp.sh  mico_server.py           run_plans.sh       TERall.txt
+gripper_tester    oldfiles                 saved_plans.txt    TLDall.txt
+kitting.py        oldtxt                   saved_pos.txt      TLUall.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_client.py           pick_and_place.py  save_plans.py
+actions.pyc       mico_gripperControl.py   plans              save_pos.py
+dump              mico_gripperControl.pyc  run_plans.py       TE_all.txt
+examplePickUp.sh  mico_server.py           run_plans.sh       TERall.txt
+gripper_tester    oldfiles                 saved_plans.txt    TLDall.txt
+kitting.py        oldtxt                   saved_pos.txt      TLUall.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd plans/
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ ls
+Grasp_100  old              TransEmptyRetract_1_0   TransLoadedDown_2_0
+Grasp_25   Release          TransEmptyRetract_2_0   TransLoadedDown_3_1
+Grasp_30   StartupPlan      TransEmptyRetract_3_1   TransLoadedDown_4_1
+Grasp_40   TransEmpty_1_0   TransEmptyRetract_4_1   TransLoadedUp_1_0
+Grasp_50   TransEmpty_2_0   TransEmptyRetract_B1_1  TransLoadedUp_2_0
+Grasp_60   TransEmpty_3_1   TransEmptyRetract_B2_1  TransLoadedUp_3_1
+Grasp_70   TransEmpty_4_1   TransLoaded_B1_1        TransLoadedUp_4_1
+Grasp_75   TransEmpty_B1_1  TransLoaded_B2_1
+Grasp_80   TransEmpty_B2_1  TransLoadedDown_1_0
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ cd ..
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_client.py           pick_and_place.py  save_plans.py
+actions.pyc       mico_gripperControl.py   plans              save_pos.py
+dump              mico_gripperControl.pyc  run_plans.py       TE_all.txt
+examplePickUp.sh  mico_server.py           run_plans.sh       TERall.txt
+gripper_tester    oldfiles                 saved_plans.txt    TLDall.txt
+kitting.py        oldtxt                   saved_pos.txt      TLUall.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_pos.py 
+[ INFO] [1458514913.047094532]: Loading robot model 'mico'...
+[ INFO] [1458514913.597025535]: Loading robot model 'mico'...
+[ INFO] [1458514914.810720211]: Ready to take MoveGroup commands for group arm.
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > q
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_client.py           pick_and_place.py  save_plans.py
+actions.pyc       mico_gripperControl.py   plans              save_pos.py
+dump              mico_gripperControl.pyc  run_plans.py       TE_all.txt
+examplePickUp.sh  mico_server.py           run_plans.sh       TERall.txt
+gripper_tester    oldfiles                 saved_plans.txt    TLDall.txt
+kitting.py        oldtxt                   saved_pos.txt      TLUall.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim TE_all.txt 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_client.py           pick_and_place.py  save_plans.py
+actions.pyc       mico_gripperControl.py   plans              save_pos.py
+dump              mico_gripperControl.pyc  run_plans.py       TE_all.txt
+examplePickUp.sh  mico_server.py           run_plans.sh       TERall.txt
+gripper_tester    oldfiles                 saved_plans.txt    TLDall.txt
+kitting.py        oldtxt                   saved_pos.txt      TLUall.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_plans.txt 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd plans/
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ ls
+Grasp_100  old              TransEmptyRetract_1_0   TransLoadedDown_2_0
+Grasp_25   Release          TransEmptyRetract_2_0   TransLoadedDown_3_1
+Grasp_30   StartupPlan      TransEmptyRetract_3_1   TransLoadedDown_4_1
+Grasp_40   TransEmpty_1_0   TransEmptyRetract_4_1   TransLoadedUp_1_0
+Grasp_50   TransEmpty_2_0   TransEmptyRetract_B1_1  TransLoadedUp_2_0
+Grasp_60   TransEmpty_3_1   TransEmptyRetract_B2_1  TransLoadedUp_3_1
+Grasp_70   TransEmpty_4_1   TransLoaded_B1_1        TransLoadedUp_4_1
+Grasp_75   TransEmpty_B1_1  TransLoaded_B2_1
+Grasp_80   TransEmpty_B2_1  TransLoadedDown_1_0
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ cd ..
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_pos.py 
+[ INFO] [1458515131.484329716]: Loading robot model 'mico'...
+[ INFO] [1458515132.040616737]: Loading robot model 'mico'...
+[ INFO] [1458515133.319579593]: Ready to take MoveGroup commands for group arm.
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveGrab1
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveAbove1
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveAbove2
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > q
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ gedit saved_pos.txt 
+^C
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py     TE_all.txt
+actions.pyc       mico_gripperControl.pyc  run_plans.sh     TERall.txt
+dump              mico_server.py           saved_plans.txt  TLDall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt    TLUall.txt
+gripper_tester    oldtxt                   saved_pos.txt~
+kitting.py        pick_and_place.py        save_plans.py
+mico_client.py    plans                    save_pos.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ run_plans.py plans/StartupPlan 
+run_plans.py: command not found
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py plans/StartupPlan 
+[ INFO] [1458515522.970783137]: Loading robot model 'mico'...
+[ INFO] [1458515523.529163428]: Loading robot model 'mico'...
+[ INFO] [1458515524.805590860]: Ready to take MoveGroup commands for group arm.
+Home
+READY
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458515567.365178709]: Loading robot model 'mico'...
+[ INFO] [1458515567.902849940]: Loading robot model 'mico'...
+[ INFO] [1458515569.187064503]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cp saved_plans.txt plans/EXAMPLE
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py plans/StartupPlan 
+[ INFO] [1458515636.568411024]: Loading robot model 'mico'...
+[ INFO] [1458515637.172034086]: Loading robot model 'mico'...
+[ INFO] [1458515638.505448146]: Ready to take MoveGroup commands for group arm.
+Home
+READY
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py plans/EXAMPLE 
+[ INFO] [1458515650.645176470]: Loading robot model 'mico'...
+[ INFO] [1458515651.219956273]: Loading robot model 'mico'...
+[ INFO] [1458515652.522811359]: Ready to take MoveGroup commands for group arm.
+Above2
+Above1
+Grab1
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py     TE_all.txt
+actions.pyc       mico_gripperControl.pyc  run_plans.sh     TERall.txt
+dump              mico_server.py           saved_plans.txt  TLDall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt    TLUall.txt
+gripper_tester    oldtxt                   saved_pos.txt~
+kitting.py        pick_and_place.py        save_plans.py
+mico_client.py    plans                    save_pos.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim kitting.py 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py     TE_all.txt
+actions.pyc       mico_gripperControl.pyc  run_plans.sh     TERall.txt
+dump              mico_server.py           saved_plans.txt  TLDall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt    TLUall.txt
+gripper_tester    oldtxt                   saved_pos.txt~
+kitting.py        pick_and_place.py        save_plans.py
+mico_client.py    plans                    save_pos.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd plans/
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ ls
+EXAMPLE    Grasp_80         TransEmpty_B2_1         TransLoadedDown_1_0
+Grasp_100  old              TransEmptyRetract_1_0   TransLoadedDown_2_0
+Grasp_25   Release          TransEmptyRetract_2_0   TransLoadedDown_3_1
+Grasp_30   StartupPlan      TransEmptyRetract_3_1   TransLoadedDown_4_1
+Grasp_40   TransEmpty_1_0   TransEmptyRetract_4_1   TransLoadedUp_1_0
+Grasp_50   TransEmpty_2_0   TransEmptyRetract_B1_1  TransLoadedUp_2_0
+Grasp_60   TransEmpty_3_1   TransEmptyRetract_B2_1  TransLoadedUp_3_1
+Grasp_70   TransEmpty_4_1   TransLoaded_B1_1        TransLoadedUp_4_1
+Grasp_75   TransEmpty_B1_1  TransLoaded_B2_1
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/plans$ cd ..
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim kitting.py 
+'hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/ypak/scripts$ history
+ 1050  cd moveit_commander/
+ 1051  cd src/moveit_commander/
+ 1052  ls
+ 1053  vim move_group.py
+ 1054  vim save_plans.py 
+ 1055  cd ..
+ 1056  cd moveit_commander/src/moveit_commander/
+ 1057  vim move_group.py
+ 1058  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1059  ./save_plans.py 
+ 1060  ./save_plans.py saved_pos.txt 
+ 1061  clear
+ 1062  ls
+ 1063  ./save_pos.py 
+ 1064  clear
+ 1065  ./save_pos.py 
+ 1066  clear
+ 1067  ./play_move.py 
+ 1068  ./play_move.py saved_pos.txt 
+ 1069  clear
+ 1070  ./save_pos.py 
+ 1071  vim saved_pos.txt 
+ 1072  cp saved_pos.txt final_video_pos.txt
+ 1073  clear
+ 1074  ./play_move.py final_video_pos.txt 
+ 1075  clear
+ 1076  ls 
+ 1077  ./save_plans.py final_video_pos.txt 
+ 1078  clear
+ 1079  ./save_pos.py 
+ 1080  cp saved_pos.txt final_video_pos.txt 
+ 1081  clear
+ 1082  ls
+ 1083  ./save_plans.py saved_pos.txt 
+ 1084  vim saved_pos.txt 
+ 1085  clear
+ 1086  ls
+ 1087  ./save_pos.py 
+ 1088  clear
+ 1089  ./save_plans.py final_video_pos.txt
+ 1090  ls
+ 1091  vim run_plans.py 
+ 1092  ./run_plans.py 
+ 1093  vim run_plans.py 
+ 1094  ./run_plans.py 
+ 1095  vim run_plans.py 
+ 1096  clear
+ 1097  gedit run_plans.py 
+ 1098  vim run_plans.py 
+ 1099  cd ..
+ 1100  source devel/setup.
+ 1101  source devel/setup.bash 
+ 1102  roslaunch mico_moveit_config path_planning.launch 
+ 1103  clear
+ 1104  roslaunch mico_moveit_config path_planning.launch 
+ 1105  clear
+ 1106  roslaunch mico_moveit_config path_planning.launch 
+ 1107  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1108  ./run_plans.py 
+ 1109  clear
+ 1110  ls
+ 1111  vim saved_pos.txt 
+ 1112  clear
+ 1113  ./run_plans.py 
+ 1114  ./run_plans.py saved_plans.txt 
+ 1115  clear
+ 1116  ./run_plans.py saved_plans.txt 
+ 1117  clear
+ 1118  ./run_plans.py saved_plans.txt 
+ 1119  clear
+ 1120  ./run_plans.py saved_plans.txt 
+ 1121  clear
+ 1122  ./run_plans.py saved_plans.txt 
+ 1123  clear
+ 1124  ./run_plans.py saved_plans.txt 
+ 1125  clear
+ 1126  ./run_plans.py saved_plans.txt 
+ 1127  clea
+ 1128  clear
+ 1129  ./run_plans.py saved_plans.txt 
+ 1130  clear
+ 1131  ./run_plans.py saved_plans.txt 
+ 1132  clear
+ 1133  ./run_plans.py saved_plans.txt 
+ 1134  clear
+ 1135  ./run_plans.py saved_plans.txt 
+ 1136  clear
+ 1137  ./run_plans.py saved_plans.txt 
+ 1138  clear
+ 1139  ./run_plans.py saved_plans.txt 
+ 1140  clear
+ 1141  ./run_plans.py saved_plans.txt 
+ 1142  clear
+ 1143  ./run_plans.py saved_plans.txt 
+ 1144  clear
+ 1145  ./run_plans.py saved_plans.txt 
+ 1146  clear
+ 1147  ./run_plans.py saved_plans.txt 
+ 1148  ./run_plans.py saved_plans.txt clear
+ 1149  clear
+ 1150  ./run_plans.py saved_plans.txt 
+ 1151  cp saved_plans.txt final_video_plans.txt
+ 1152  clear
+ 1153  ls
+ 1154  vim saved_plans.txt 
+ 1155  vim final_video_pos.txt
+ 1156  cd Documents/John/nri-authoring-environment/wpi_jaco/
+ 1157  ls
+ 1158  ./kill.sh 
+ 1159  clear
+ 1160  vim READ_ME.txt
+ 1161  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1162  cd src/mypak/scripts/
+ 1163  ls
+ 1164  rm *~
+ 1165  ls
+ 1166  vim saved_p
+ 1167  vim saved_plans.txt 
+ 1168  vim save_plans.py 
+ 1169  vim saved_plans.txt 
+ 1170  cp saved_plans.txt final_video_plans.txt 
+ 1171  clear
+ 1172  ls
+ 1173  vim run_plans.py 
+ 1174  vim actions.py
+ 1175  source 
+ 1176  clear
+ 1177  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1178  clear
+ 1179  ls
+ 1180  cd src/mypak/
+ 1181  ls
+ 1182  cd scripts/
+ 1183  ls
+ 1184  mv ave_slope.py dump/
+ 1185  ls
+ 1186  mv rospy dump/
+ 1187  mv moveit_commander dump/
+ 1188  clear
+ 1189  ls
+ 1190  mv geometry_msgs.msg dump/
+ 1191  ls
+ 1192  mv moveit_msgs.msg dump/
+ 1193  clear
+ 1194  ls
+ 1195  mkdir gripper_tester
+ 1196  mv grip_tester.txt gripper_tester/
+ 1197  clear
+ 1198  ls
+ 1199  mv final_gripper_timing.txt gripper_tester/
+ 1200  mv gripper_timing.py gripper_tester/
+ 1201  clear
+ 1202  ls
+ 1203  ./run_plans.py 
+ 1204  vim saved_plans.txt 
+ 1205  vim save_pos.py 
+ 1206  vim saved_pos.txt 
+ 1207  ./run_plans.py final_video_plans.txt 
+ 1208  ./save_pos.py 
+ 1209  vim save_pos.py 
+ 1210  clear
+ 1211  ./save_pos.py 
+ 1212  clear
+ 1213  ls
+ 1214  ./save_plans.py saved_pos.txt 
+ 1215  clear
+ 1216  gedit saved_pos.txt 
+ 1217  source devel/setup.bash 
+ 1218  cd src/mypak/scripts/
+ 1219  clear
+ 1220  ls
+ 1221  ./save_plans.py final_video_pos.txt
+ 1222  clear
+ 1223  ./save_plans.py final_video_pos.txt
+ 1224  ./run_plans.py saved_plans.txt 
+ 1225  clear
+ 1226  cp saved_plans.txt final_video_plans.txt 
+ 1227  clear
+ 1228  ls
+ 1229  ./save_pos.py 
+ 1230  vim saved_pos.txt
+ 1231  gedit saved_pos.txt
+ 1232  clear
+ 1233  ./save_plans.py saved_pos.txt
+ 1234  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1235  ./save_plans.py saved_pos.txt
+ 1236  clear
+ 1237  ./save_plans.py saved_pos.txt
+ 1238  ./run_plans.py saved_plans.txt 
+ 1239  ./save_plans.py saved_pos.txt
+ 1240  clear
+ 1241  ./run_plans.py saved_plans.txt 
+ 1242  clear
+ 1243  ./save_plans.py final_video_pos.txt
+ 1244  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1245  ./save_plans.py final_video_pos.txt
+ 1246  ./run_plans.py saved_plans.txt 
+ 1247  ./save_plans.py final_video_pos.txt
+ 1248  cp saved_plans.txt final_video_plans.txt 
+ 1249  clear
+ 1250  ./save_plans.py saved_pos.txt
+ 1251  ./save_pos.py 
+ 1252  clear
+ 1253  ./save_plans.py saved_pos.txt
+ 1254  clear
+ 1255  ./save_plans.py saved_pos.txt
+ 1256  clear
+ 1257  ./save_pos.py 
+ 1258  vim saved_pos.txt
+ 1259  ./save_plans.py saved_pos.txt
+ 1260  ./save_plans.py saved_pos.txt
+ 1261  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1262  ./save_plans.py saved_pos.txt
+ 1263  gedit saved_pos.txt
+ 1264  clear
+ 1265  ls
+ 1266  ./save_pos.py 
+ 1267  ./play_move.py save_pos.py 
+ 1268  ./save_plans.py saved_pos.txt
+ 1269  clear
+ 1270  ./save_pos.py 
+ 1271  vim saved_pos.txt
+ 1272  ./save_plans.py saved_pos.txt
+ 1273  ls
+ 1274  vim actions.py
+ 1275  gedit saved_pos.txt
+ 1276  ./save_pos.py 
+ 1277  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1278  clear
+ 1279  ./save_pos.py 
+ 1280  ./save_plans.py save_pos.py 
+ 1281  ./save_plans.py saved_pos.txt 
+ 1282  ls
+ 1283  clear
+ 1284  ls
+ 1285  vim mico_server.py 
+ 1286  ls
+ 1287  vim high_level_structs.cpp 
+ 1288  vim structs.cpp 
+ 1289  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1290  ./run_plans.py saved_plans.txt 
+ 1291  ./save_plans.py saved_pos.txt
+ 1292  clear
+ 1293  ./save_plans.py final_video_pos.txt
+ 1294  clear
+ 1295  cp saved_plans.txt final_video_plans.txt 
+ 1296  vim run_plans.sh
+ 1297  ls
+ 1298  chmod +x run_plans.sh 
+ 1299  vim run_plans.
+ 1300  vim run_plans.sh 
+ 1301  clear
+ 1302  ./run_plans.sh 
+ 1303  vim run_plans.sh 
+ 1304  ./run_plans.sh 
+ 1305  vim run_plans.sh 
+ 1306  ./run_plans.sh 
+ 1307  vin run_plans.sh 
+ 1308  vim run_plans.sh 
+ 1309  ./run_plans.sh 
+ 1310  clear
+ 1311  cd ..
+ 1312  ls
+ 1313  cd nsf_nri-master/
+ 1314  ls
+ 1315  cd workspace/pr2lib/
+ 1316  ls
+ 1317  cd src/
+ 1318  ls
+ 1319  vim reciever.cpp
+ 1320  vim run_plans.py 
+ 1321  cp saved_pos.txt TE_all.txt
+ 1322  mkdor oldtxt
+ 1323  mkdir oldtxt
+ 1324  ls
+ 1325  mv final* oldtxt/
+ 1326  ls
+ 1327  mv mico_client.py dump/
+ 1328  vim run_plans.sh 
+ 1329  mkdir oldfiles
+ 1330  mv replay_pos.py oldfiles/
+ 1331  clear
+ 1332  ls
+ 1333  mv play_move.py oldfiles/
+ 1334  ls
+ 1335  mv play_pos.py oldfiles/
+ 1336  mv tut.py oldfiles/
+ 1337  mv tst.py oldfiles/
+ 1338  ls
+ 1339  ./save_plans.py saved_pos.txt
+ 1340  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1341  ./save_plans.py saved_pos.txt
+ 1342  clear
+ 1343  cp saved_plans.txt StartupPlans.txt
+ 1344  ls
+ 1345  mkdir plans
+ 1346  mv StartupPlans.txt plans/
+ 1347  ls
+ 1348  vim run_plans.sh 
+ 1349  ./run_plans.py saved_plans.txt 
+ 1350  ./run_plans.py /plans/StartupPlan.txt
+ 1351  cd plans/
+ 1352  ls
+ 1353  mv StartupPlans.txt StartupPlan.txt
+ 1354  cd ..
+ 1355  ./run_plans.py /plans/StartupPlan.txt
+ 1356  clear
+ 1357  ls
+ 1358  cd plans/
+ 1359  ls
+ 1360  cd ..
+ 1361  ./run_plans.py plans/StartupPlan.txt
+ 1362  ./save_plans.py saved_pos.txt
+ 1363  ./run_plans.py plans/StartupPlan.txt
+ 1364  ./save_plans.py saved_pos.txt
+ 1365  ./run_plans.py plans/StartupPlan.txt
+ 1366  ./save_plans.py saved_pos.txt
+ 1367  cp saved_plans.txt plans/TransEmpty_1_0.txt
+ 1368  ./run_plans.py plans/StartupPlan.txt
+ 1369  ./save_plans.py saved_pos.txt
+ 1370  cp saved_plans.txt plans/TransEmpty_1_1.txt
+ 1371  ./run_plans.py plans/StartupPlan.txt
+ 1372  ./save_plans.py saved_pos.txt
+ 1373  cp saved_plans.txt plans/TransEmpty_2_0.txt
+ 1374  ./run_plans.py plans/StartupPlan.txt
+ 1375  ./save_plans.py saved_pos.txt
+ 1376  cp saved_plans.txt plans/TransEmpty_2_1.txt
+ 1377  ./run_plans.py plans/StartupPlan.txt
+ 1378  ./save_plans.py saved_pos.txt
+ 1379  ./run_plans.py plans/StartupPlan.txt
+ 1380  ./save_plans.py saved_pos.txt
+ 1381  ./run_plans.py plans/StartupPlan.txt
+ 1382  ./save_plans.py saved_pos.txt
+ 1383  clear
+ 1384  ./run_plans.py plans/StartupPlan.txt
+ 1385  ./save_plans.py saved_pos.txt
+ 1386  ./run_plans.py plans/StartupPlan.txt
+ 1387  ./save_plans.py saved_pos.txt
+ 1388  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1389  ./run_plans.py plans/StartupPlan.txt
+ 1390  ./save_plans.py saved_pos.txt
+ 1391  ls
+ 1392  vim save_plans.py 
+ 1393  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1394  ./run_plans.py plans/StartupPlan.txt
+ 1395  ./save_plans.py saved_pos.txt
+ 1396  cp saved_plans.txt plans/TransEmpty_3_0.txt
+ 1397  ./run_plans.py plans/StartupPlan.txt
+ 1398  ./save_plans.py saved_pos.txt
+ 1399  cp saved_plans.txt plans/TransEmpty_3_1.txt
+ 1400  clear
+ 1401  ./run_plans.py plans/StartupPlan.txt
+ 1402  ./save_plans.py saved_pos.txt
+ 1403  ./run_plans.py plans/StartupPlan.txt
+ 1404  ./save_plans.py saved_pos.txt
+ 1405  ./run_plans.py plans/StartupPlan.txt
+ 1406  ./save_plans.py saved_pos.txt
+ 1407  cp saved_plans.txt plans/TransEmpty_4_1.txt
+ 1408  clear
+ 1409  ./save_pos.py 
+ 1410  ./run_plans.py plans/StartupPlan.txt
+ 1411  ./save_plans.py saved_pos.txt
+ 1412  cp saved_plans.txt plans/TransEmpty_4_0.txt
+ 1413  cd plans/
+ 1414  ls
+ 1415  cd ..
+ 1416  ./run_plans.py plans/Grasp_50.txt
+ 1417  clear
+ 1418  ./run_plans.py plans/Grasp_25
+ 1419  ./run_plans.py plans/Grasp_75
+ 1420  clear
+ 1421  cd plans/
+ 1422  ls
+ 1423  mv StartupPlan.txt StartupPlan
+ 1424  mv TransEmpty_1_0.txt TransEmpty_1_0
+ 1425  ls
+ 1426  mv Release.txt Release
+ 1427  mv Grasp_50.txt Grasp_50
+ 1428  mv TransEmpty_1_1.txt TransEmpty_1_1
+ 1429  mv TransEmpty_2_1.txt TransEmpty_2_1
+ 1430  mv TransEmpty_3_1.txt TransEmpty_3_1
+ 1431  mv TransEmpty_4_1.txt TransEmpty_4_1
+ 1432  mv TransEmpty_4_0.txt TransEmpty_4_0
+ 1433  mv TransEmpty_3_0.txt TransEmpty_3_0
+ 1434  mv TransEmpty_2_0.txt TransEmpty_2_0
+ 1435  clear
+ 1436  ls
+ 1437  vim Grasp_100
+ 1438  ls
+ 1439  clear
+ 1440  ./run_plans.py plans/Grasp_75
+ 1441  cd ..
+ 1442  ./run_plans.py plans/StartupPlan 
+ 1443  ./run_plans.py plans/TransEmpty_1_0
+ 1444  ./run_plans.py plans/Grasp_50
+ 1445  ./save_pos.py 
+ 1446  clear
+ 1447  ./run_plans.py plans/StartupPlan 
+ 1448  ./run_plans.py plans/TransEmpty_1_0
+ 1449  ./save_plans.py saved_pos.txt
+ 1450  cp saved_plans.txt plans/TransLoadedUp_1_0
+ 1451  ./run_plans.py plans/StartupPlan 
+ 1452  ./run_plans.py plans/TransEmpty_1_1
+ 1453  ./save_plans.py saved_pos.txt
+ 1454  ./run_plans.py plans/StartupPlan 
+ 1455  ./run_plans.py plans/TransEmpty_1_1
+ 1456  ./save_pos.py 
+ 1457  ./run_plans.py plans/StartupPlan 
+ 1458  ./run_plans.py plans/TransEmpty_1_1
+ 1459  ./save_plans.py saved_pos.txt
+ 1460  cp saved_plans.txt plans/TransLoadedUp_1_1
+ 1461  ./run_plans.py plans/TransEmpty_2_0
+ 1462  ./save_pos.py 
+ 1463  ./run_plans.py plans/StartupPlan 
+ 1464  ./run_plans.py plans/TransEmpty_2_0
+ 1465  ./save_plans.py saved_pos.txt
+ 1466  ./run_plans.py plans/TransEmpty_2_0
+ 1467  ./save_plans.py saved_pos.txt
+ 1468  ./run_plans.py plans/TransEmpty_2_0
+ 1469  ./save_plans.py saved_pos.txt
+ 1470  cp saved_plans.txt plans/TransLoadedUp_2_0
+ 1471  ./run_plans.py plans/TransEmpty_1_1
+ 1472  ./run_plans.py plans/StartupPlan 
+ 1473  ./run_plans.py plans/TransEmpty_1_0
+ 1474  ./run_plans.py plans/TransLoadedUp_1_0
+ 1475  ./run_plans.py plans/TransEmpty_2_1
+ 1476  ./save_pos.py 
+ 1477  ./run_plans.py plans/StartupPlan 
+ 1478  ./run_plans.py plans/TransEmpty_2_1
+ 1479  ./save_plans.py saved_pos.txt
+ 1480  cp saved_plans.txt plans/TransLoadedUp_2_1
+ 1481  ./run_plans.py plans/TransEmpty_3_0
+ 1482  ./save_pos.py 
+ 1483  ./run_plans.py plans/StartupPlan 
+ 1484  ./run_plans.py plans/TransEmpty_3_0
+ 1485  ./save_plans.py saved_pos.txt
+ 1486  ./run_plans.py plans/StartupPlan 
+ 1487  ./run_plans.py plans/TransEmpty_3_0
+ 1488  ./save_plans.py saved_pos.txt
+ 1489  ./run_plans.py plans/StartupPlan 
+ 1490  ./run_plans.py plans/TransEmpty_3_0
+ 1491  ./save_plans.py saved_pos.txt
+ 1492  vim actions.py
+ 1493  vim run_plans.py 
+ 1494  cd plans/
+ 1495  ls
+ 1496  vim actions.py
+ 1497  cd ..
+ 1498  vim actions.py
+ 1499  vim save_pos.py 
+ 1500  vimac
+ 1501  vim actions.py
+ 1502  clear
+ 1503  ls
+ 1504  ./pick_and_place.py 
+ 1505  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1506  ./pick_and_place.py 
+ 1507  clear
+ 1508  ls
+ 1509  cd plans/
+ 1510  ls
+ 1511  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1512  cd ..
+ 1513  ./pick_and_place.py 
+ 1514  gedit saved_pos.txt
+ 1515  cd ..
+ 1516  vim runRviz.sh 
+ 1517  clear
+ 1518  cd src/mypak/scripts/
+ 1519  vim actions.py
+ 1520  vim mico_server.py 
+ 1521  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1522  ./save_pos.py 
+ 1523  vim saved_pos.txt
+ 1524  gedit saved_pos.txt
+ 1525  clear
+ 1526  cd plans/
+ 1527  ls
+ 1528  mkdir old
+ 1529  mz Trans* old/
+ 1530  mv Trans* old/
+ 1531  ls
+ 1532  clear
+ 1533  cd ..
+ 1534  vim saved_pos.txt 
+ 1535  gedit saved_pos.txt 
+ 1536  ls
+ 1537  cd plans/
+ 1538  ls
+ 1539  cd old/
+ 1540  ls
+ 1541  mv TransEmpty_3_1 ../
+ 1542  mv TransEmpty_4_1 ../
+ 1543  clear
+ 1544  ls
+ 1545  mv TransLoadedDown_4_1
+ 1546  mv Trans_4_1 ../
+ 1547  mv TransLoadedDown_3_1
+ 1548  mv TransLoadedDown_3_1 ../
+ 1549  mv TransEmptyRetract_3_1 ../
+ 1550  mv TransEmptyRetract_4_1 ../
+ 1551  clear
+ 1552  ls
+ 1553  mv TransLoadedUp_3_1
+ 1554  mv TransLoadedUp_3_1 ../
+ 1555  mv TransLoadedUp_4_1 ../
+ 1556  clear
+ 1557  cd ...
+ 1558  cd ..
+ 1559  ls
+ 1560  mv TransLoadedUp_4_1 ../
+ 1561  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1562  ./save_pos.py 
+ 1563  ./pick_and_place.py 
+ 1564  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1565  chmod +x mico_client.py 
+ 1566  ./run_plans.py plans/StartupPlan 
+ 1567  ls
+ 1568  history
+ 1569  clear
+ 1570  ls
+ 1571  cd Documents/John/nri-authoring-environment/wpi_jaco/
+ 1572  ls
+ 1573  cd ..
+ 1574  ls
+ 1575  rm -R catkin_ws/
+ 1576  ls
+ 1577  cd ..
+ 1578  ls
+ 1579  rm -R wisc-robotics/
+ 1580  ls
+ 1581  cd nri-authoring-environment/
+ 1582  ls
+ 1583  cd wpi_jaco/
+ 1584  ls
+ 1585  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1586  ./runRviz.sh 
+ 1587  ./kill.sh 
+ 1588  ./runRviz.sh 
+ 1589  clear
+ 1590  cd ..
+ 1591  cd nsf_nri-master/
+ 1592  ls
+ 1593  cd workspace/pr2lib/
+ 1594  ls
+ 1595  cd src/
+ 1596  ls
+ 1597  clear
+ 1598  vim structs.cpp 
+ 1599  vim run_plans.py 
+ 1600  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1601  ls
+ 1602  cd src/mypak/scripts/
+ 1603  ls
+ 1604  ~
+ 1605  rm *~
+ 1606  la
+ 1607  ls
+ 1608  la
+ 1609  rm .kitt*
+ 1610  la
+ 1611  vim kitting.py 
+ 1612  clear
+ 1613  ./mico_server.py 
+ 1614  clear
+ 1615  ./mico_server.py 
+ 1616  clear
+ 1617  ./mico_server.py 
+ 1618  clear
+ 1619  ./mico_server.py 
+ 1620  clear
+ 1621  ./mico_server.py 
+ 1622  clear
+ 1623  ./mico_server.py 
+ 1624  clear
+ 1625  ./mico_server.py 
+ 1626  clear
+ 1627  ./mico_server.py 
+ 1628  clear
+ 1629  ./mico_server.py 
+ 1630  clear
+ 1631  ./mico_server.py 
+ 1632  clear
+ 1633  ./mico_server.py 
+ 1634  clear
+ 1635  ./mico_server.py 
+ 1636  clear
+ 1637  ./mico_server.py 
+ 1638  clear
+ 1639  ./mico_server.py 
+ 1640  clear
+ 1641  sou
+ 1642  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1643  ./mico_client.py 
+ 1644  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1645  ./mico_client.py 
+ 1646  clear
+ 1647  ./mico_client.py 
+ 1648  clear
+ 1649  ./mico_client.py 
+ 1650  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1651  ./kitting.py 
+ 1652  clear
+ 1653  ./kitting.py 
+ 1654  clear
+ 1655  ls
+ 1656  ./save_pos.py 
+ 1657  ./run_plans.py plans/StartupPlan 
+ 1658  ./save_plans.py saved_pos.txt
+ 1659  cp saved_plans.txt plans/TransLoadedDown_4_1 
+ 1660  ./save_plans.py saved_pos.txt
+ 1661  cp saved_plans.txt plans/TransLoadedUp_4_1 
+ 1662  cd plans/
+ 1663  cp TransLoadedDown_4_1 TransEmpty_4_1 
+ 1664  clear
+ 1665  cd ..
+ 1666  ./save_pos.py 
+ 1667  ./run_plans.py plans/StartupPlan 
+ 1668  ./save_plans.py saved_pos.txt
+ 1669  ./run_plans.py plans/StartupPlan 
+ 1670  ./save_plans.py saved_pos.txt
+ 1671  cp saved_plans.txt plans/TransLoadedDown_4_1 
+ 1672  ./save_plans.py saved_pos.txt
+ 1673  cp saved_plans.txt plans/TransEmptyRetract_4_1 
+ 1674  clear
+ 1675  ./kitting.py 
+ 1676  clear
+ 1677  ./kitting.py 
+ 1678  clear
+ 1679  ./run_plans.py plans/TransEmpty_3_1 
+ 1680  ./run_plans.py plans/TransEmpty_2_0 
+ 1681  clear
+ 1682  ls
+ 1683  ./pick_and_place.py 
+ 1684  clear
+ 1685  ./save_pos.py 
+ 1686  ./run_plans.py plans/StartupPlan 
+ 1687  ./save_plans.py saved_pos.txt
+ 1688  cp saved_plans.txt plans/TransEmpty_2_0 
+ 1689  ./save_plans.py saved_pos.txt
+ 1690  cp saved_plans.txt plans/TransLoadedUp_2_0 
+ 1691  clear
+ 1692  ./pick_and_place.py 
+ 1693  clear
+ 1694  vim actions.py
+ 1695  ./kitting.py 
+ 1696  clear
+ 1697  ./mico_server.py 
+ 1698  vim mico_server.py 
+ 1699  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1700  cd dump/
+ 1701  ls
+ 1702  mv mico_client.py ../
+ 1703  cd ..
+ 1704  ls
+ 1705  vim mico_client.py 
+ 1706  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1707  cd ..
+ 1708  cd d..
+ 1709  cd ..
+ 1710  ./runRviz.sh 
+ 1711  ./kill.sh
+ 1712  ./runRviz.sh 
+ 1713  ./kill.sh 
+ 1714  ./runRviz.sh 
+ 1715  ls
+ 1716  vim high_level_test_input.cpp 
+ 1717  ./high_level_test_input.cpp 
+ 1718  ./hlti.o 
+ 1719  vim high_level_vim high_level_vim high_level_vivvijvisvismdvidsmvdsmivsd
+ 1720  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1721  ./mico_server.py 
+ 1722  clear
+ 1723  ./mico_server.py 
+ 1724  clear
+ 1725  ./mico_server.py 
+ 1726  clear
+ 1727  ./mico_server.py 
+ 1728  clear
+ 1729  ./mico_server.py 
+ 1730  clear
+ 1731  ./mico_server.py 
+ 1732  clear
+ 1733  ./mico_server.py 
+ 1734  cclear
+ 1735  cleaR
+ 1736  clear
+ 1737  ./mico_server.py 
+ 1738  clear
+ 1739  ./run_plans.py plans/StartupPlan 
+ 1740  vim mico_client.py 
+ 1741  ./mico_server.py 
+ 1742  clear
+ 1743  ./mico_server.py 
+ 1744  clear
+ 1745  ./mico_server.py 
+ 1746  clear
+ 1747  ./mico_server.py 
+ 1748  clear
+ 1749  ./mico_server.py 
+ 1750  clear
+ 1751  ./kitting.py 
+ 1752  vim kitting.py 
+ 1753  gedit kitting.py 
+ 1754  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1755  ls
+ 1756  cd ..
+ 1757  cd..
+ 1758  cd ..
+ 1759  cd nsf_nri-master/
+ 1760  cd workspace/pr2lib/src/
+ 1761  ls
+ 1762  clear
+ 1763  ls
+ 1764  vim structs.cpp 
+ 1765  VIM reciever.cpp
+ 1766  vim reciever.cpp
+ 1767  vim high_level_test_input.cpp 
+ 1768  ./hlti.o 
+ 1769  q
+ 1770  clear
+ 1771  ./hlti.o 
+ 1772  q
+ 1773  gcc high_level_test_input.cpp hlti.o
+ 1774  gcc -o high_level_test_input.cpp hlti.o
+ 1775  clear
+ 1776  g++ -o high_level_test_input.cpp hlti.o
+ 1777  ls
+ 1778  vim test_input.cpp 
+ 1779  clear
+ 1780  ./hlti.o 
+ 1781  clear
+ 1782  vim high_level_structs.cpp 
+ 1783  ls
+ 1784  vim test_input.cpp 
+ 1785  ls
+ 1786  g++ test_input.cpp ti.o
+ 1787  g++ -o test_input.cpp ti.o
+ 1788  g++ test_input.cpp -o ti.o
+ 1789  ./ti.o 
+ 1790  vim test_input.cpp 
+ 1791  g++ test_input.cpp -o ti.o
+ 1792  clear
+ 1793  ./ti.o 
+ 1794  clear
+ 1795  ./hlti.o 
+ 1796  q
+ 1797  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1798  cd ..
+ 1799  cd wpi_jaco/src/mypak/scripts/
+ 1800  ls
+ 1801  clear
+ 1802  ls
+ 1803  vim kitting.py 
+ 1804  vim mico_server.py 
+ 1805  ./run_plans.py plans/StartupPlan 
+ 1806  clear
+ 1807  ./mico_server.py 
+ 1808  vim mico_server.py 
+ 1809  ./mico_server.py 
+ 1810  vim mico_server.py 
+ 1811  clear
+ 1812  ./mico_server.py 
+ 1813  clear
+ 1814  ./mico_server.py 
+ 1815  clear
+ 1816  vim mico_server.py 
+ 1817  ./mico_server.py 
+ 1818  vim mico_server.py 
+ 1819  ./mico_server.py 
+ 1820  vim mico_server.py 
+ 1821  clear
+ 1822  ./mico_server.py
+ 1823  ./run_plans.py plans/StartupPlan 
+ 1824  ./mico_server.py
+ 1825  clear
+ 1826  ls
+ 1827  la
+ 1828  rm *~
+ 1829  ./mico_server.py
+ 1830  clear
+ 1831  ./mico_server.py
+ 1832  clear
+ 1833  ./mico_server.py
+ 1834  clear
+ 1835  ./run_plans.py plans/StartupPlan 
+ 1836  ./mico_server.py
+ 1837  clear
+ 1838  ./mico_server.py
+ 1839  clear
+ 1840  ./mico_server.py
+ 1841  clear
+ 1842  ./mico_server.py
+ 1843  ./run_plans.py plans/StartupPlan 
+ 1844  clear
+ 1845  ./mico_server.py
+ 1846  ./run_plans.py plans/StartupPlan 
+ 1847  ./mico_server.py
+ 1848  clear
+ 1849  ./mico_server.py
+ 1850  clear
+ 1851  ./mico_server.py
+ 1852  ./run_plans.py plans/StartupPlan 
+ 1853  ./mico_server.py
+ 1854  clear
+ 1855  vim run_plans.sh 
+ 1856  vim kitting.py 
+ 1857  vim run_plans.sh 
+ 1858  ./kitting.py 
+ 1859  clear
+ 1860  cd Documents/John/
+ 1861  ls
+ 1862  cd nri-authoring-environment/
+ 1863  ls
+ 1864  cd wpi_jaco/
+ 1865  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1866  clear
+ 1867  ./runRviz.sh 
+ 1868  ./kill.sh 
+ 1869  ./runRviz.sh 
+ 1870  clear
+ 1871  ./runRviz.sh 
+ 1872  clear
+ 1873  ./runRviz.sh 
+ 1874  ./kill.sh 
+ 1875  ./runRviz.sh 
+ 1876  ./kill.sh 
+ 1877  ./runRviz.sh 
+ 1878  ./kill.sh 
+ 1879  ./runRviz.sh 
+ 1880  ./kill.sh 
+ 1881  clear
+ 1882  ./runRviz.sh 
+ 1883  ./kill.sh 
+ 1884  cd Documents/John/
+ 1885  ls
+ 1886  cd nri-authoring-environment/wpi_jaco/
+ 1887  ls
+ 1888  ./runRviz.sh 
+ 1889  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1890  ls
+ 1891  ./run_plans.py plans/TransLoadedDown_1_0 
+ 1892  ./run_plans.py plans/TransEmptyRetract_1_0 
+ 1893  ./run_plans.py plans/StartupPlan 
+ 1894  ./run_plans.py plans/TransLoadedDown_1_0 
+ 1895  ./run_plans.py plans/TransEmptyRetract_1_0 
+ 1896  ./run_plans.py plans/StartupPlan 
+ 1897  ./run_plans.py plans/TransEmpty_B1_1 
+ 1898  ./run_plans.py plans/StartupPlan 
+ 1899  ./run_plans.py plans/TransEmpty_B1_1 
+ 1900  ./run_plans.py plans/TransLoaded_B1_1 
+ 1901  ./run_plans.py plans/StartupPlan 
+ 1902  ./run_plans.py plans/TransEmpty_B1_1 
+ 1903  ./run_plans.py plans/TransLoaded_B1_1 
+ 1904  clear
+ 1905  ./run_plans.py plans/TransLoadedDown_3_1 
+ 1906  ./run_plans.py plans/TransEmptyRetract_3_1 
+ 1907  ./run_plans.py plans/TransLoadedDown_2_0 
+ 1908  ./run_plans.py plans/TransEmptyRetract_2_0 
+ 1909  ./run_plans.py plans/StartupPlan 
+ 1910  ./run_plans.py plans/TransEmpty_B2_1 
+ 1911  ./run_plans.py plans/StartupPlan 
+ 1912  ./run_plans.py plans/TransEmpty_B2_1 
+ 1913  ./run_plans.py plans/StartupPlan 
+ 1914  ./run_plans.py plans/TransEmpty_B2_1 
+ 1915  ./run_plans.py plans/TransLoaded_B2_1 
+ 1916  ./run_plans.py plans/StartupPlan 
+ 1917  ./run_plans.py plans/TransLoaded_B2_1 
+ 1918  clear
+ 1919  gedit save_pos.py 
+ 1920  vim run_plans.sh 
+ 1921  vim kitting.py 
+ 1922  sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+ 1923  sudo apt-get update
+ 1924  sudo apt-get install simplescreenrecorder
+ 1925  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1926  ./runRviz.sh 
+ 1927  ./runRviz.sh ~
+ 1928  clear
+ 1929  ./kill.sh 
+ 1930  clear
+ 1931  ./runRviz.sh 
+ 1932  clear
+ 1933  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 1934  cd src/mypak/scripts/
+ 1935  ls
+ 1936  ./kitting.py 
+ 1937  clear
+ 1938  ./kitting.py 
+ 1939  clear
+ 1940  ls
+ 1941  ./save_pos.py 
+ 1942  clear
+ 1943  ./save_plans.py saved_pos.txt
+ 1944  cp saved_plans.txt plans/TransEmpty_B1_1
+ 1945  ./save_pos.py
+ 1946  clear
+ 1947  ./save_plans.py saved_pos.txt
+ 1948  cp saved_plans.txt plans/TransLoaded_B1_1
+ 1949  ./save_pos.py
+ 1950  ./save_plans.py saved_pos.txt
+ 1951  cp saved_plans.txt plans/TransEmptyRetract_B1_1
+ 1952  clear
+ 1953  ./save_pos.py
+ 1954  clear
+ 1955  ./save_plans.py saved_pos.txt
+ 1956  cp saved_plans.txt plans/TransEmpty_B2_1 
+ 1957  clear
+ 1958  ./save_pos.py 
+ 1959  ./save_plans.py saved_pos.txt
+ 1960  clear
+ 1961  ./save_plans.py saved_pos.txt
+ 1962  ./save_pos.py 
+ 1963  ./save_plans.py saved_pos.txt
+ 1964  clear
+ 1965  cp saved_plans.txt plans/TransLoaded_B2_1 
+ 1966  ./save_pos.py 
+ 1967  clear
+ 1968  ./save_plans.py saved_pos.txt
+ 1969  cp saved_plans.txt plans/TransEmptyRetract_B2_1
+ 1970  clear
+ 1971  vim kitting.py 
+ 1972  clear
+ 1973  ./kitting.py 
+ 1974  clear
+ 1975  vim run_plans.sh 
+ 1976  ./run_plans.sh 
+ 1977  ./run_plans.py plans/TransEmpty_B2_1 
+ 1978  ./run_plans.py plans/TransLoaded_B2_1 
+ 1979  ./run_plans.py plans/TransEmpty_B2_1 
+ 1980  ./run_plans.py plans/TransLoaded_B2_1 
+ 1981  ./run_plans.py plans/TransEmpty_B2_1 
+ 1982  ./run_plans.py plans/TransLoaded_B2_1 
+ 1983  ./run_plans.py plans/TransEmpty_B2_1 
+ 1984  ./run_plans.py plans/TransLoaded_B2_1 
+ 1985  ./run_plans.py plans/TransEmpty_B2_1 
+ 1986  ./run_plans.py plans/TransLoaded_B2_1 
+ 1987  ./run_plans.py plans/TransEmpty_B2_1 
+ 1988  ./run_plans.py plans/TransLoaded_B2_1 
+ 1989  cleart
+ 1990  clear'
+ 1991  clear
+ 1992  ./run_plans.sh 
+ 1993  clear
+ 1994  vim kitting.py 
+ 1995  ./run_plans.sh 
+ 1996  vim kitting.py 
+ 1997  ./run_plans.sh 
+ 1998  clear
+ 1999  vim kitting.py 
+ 2000  clear
+ 2001  cd src/mypak/scripts/
+ 2002  ls
+ 2003  source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash 
+ 2004  ls
+ 2005  rm *~
+ 2006  cleqr
+ 2007  clear
+ 2008  ls
+ 2009  cd plans/
+ 2010  ls
+ 2011  cd ..
+ 2012  clear
+ 2013  ls
+ 2014  ./save_pos.py 
+ 2015  clear
+ 2016  ls
+ 2017  vim saved_pos.txt 
+ 2018  vim TE_all.txt 
+ 2019  clear
+ 2020  ls
+ 2021  vim saved_plans.txt 
+ 2022  cd plans/
+ 2023  ls
+ 2024  clear
+ 2025  cd ..
+ 2026  ./save_pos.py 
+ 2027  clear
+ 2028  vim saved_pos.txt 
+ 2029  gedit saved_pos.txt 
+ 2030  clear
+ 2031  ls
+ 2032  run_plans.py plans/StartupPlan 
+ 2033  ./run_plans.py plans/StartupPlan 
+ 2034  ./save_plans.py saved_pos.txt
+ 2035  clear
+ 2036  cp saved_plans.txt plans/EXAMPLE
+ 2037  clear
+ 2038  ./run_plans.py plans/StartupPlan 
+ 2039  ./run_plans.py plans/EXAMPLE 
+ 2040  clear
+ 2041  ls
+ 2042  vim kitting.py 
+ 2043  clear
+ 2044  ls
+ 2045  cd plans/
+ 2046  ls
+ 2047  cd ..
+ 2048  vim kitting.py 
+ 2049  history
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py     TE_all.txt
+actions.pyc       mico_gripperControl.pyc  run_plans.sh     TERall.txt
+dump              mico_server.py           saved_plans.txt  TLDall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt    TLUall.txt
+gripper_tester    oldtxt                   saved_pos.txt~
+kitting.py        pick_and_place.py        save_plans.py
+mico_client.py    plans                    save_pos.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py     TE_all.txt
+actions.pyc       mico_gripperControl.pyc  run_plans.sh     TERall.txt
+dump              mico_server.py           saved_plans.txt  TLDall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt    TLUall.txt
+gripper_tester    oldtxt                   saved_pos.txt~
+kitting.py        pick_and_place.py        save_plans.py
+mico_client.py    plans                    save_pos.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cp saved_pos.txt saved_pos.txt.bk.03-24-16
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py               save_pos.py
+actions.pyc       mico_gripperControl.pyc  run_plans.sh               TE_all.txt
+dump              mico_server.py           saved_plans.txt            TERall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt              TLDall.txt
+gripper_tester    oldtxt                   saved_pos.txt~             TLUall.txt
+kitting.py        pick_and_place.py        saved_pos.txt.bk.03-24-16
+mico_client.py    plans                    save_plans.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ pwd
+/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 1 - cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+1: command not found
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 1 - cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+1: command not found
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_pos.py
+[ INFO] [1458840546.054444866]: Loading robot model 'mico'...
+[ INFO] [1458840546.685437232]: Loading robot model 'mico'...
+Traceback (most recent call last):
+  File "./save_pos.py", line 19, in <module>
+    acHan = ActionHandler(group_name, planner_name, ee_link_name)
+  File "/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts/actions.py", line 18, in __init__
+    self.group = moveit_commander.MoveGroupCommander(group_name)
+  File "/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_commander/src/moveit_commander/move_group.py", line 52, in __init__
+    self._g = _moveit_move_group_interface.MoveGroup(name, "robot_description")
+RuntimeError: Unable to connect to move_group action server within allotted time (2)
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_pos.py
+[ INFO] [1458841103.697202641]: Loading robot model 'mico'...
+[ INFO] [1458841104.276407881]: Loading robot model 'mico'...
+[ INFO] [1458841105.493185365]: Ready to take MoveGroup commands for group arm.
+[WARN] [WallTime: 1458841109.079738] gripper action timeout.
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveTransportEmptyOne
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveTransportEmptyOneAbove
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveHome
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > q
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py
+[ INFO] [1458841606.341535535]: Loading robot model 'mico'...
+[ INFO] [1458841606.901996125]: Loading robot model 'mico'...
+[ INFO] [1458841608.189680105]: Ready to take MoveGroup commands for group arm.
+")
+plans = plans[1:]
+
+for p in plans:
+    name_plan = p.split(' >\n')
+    print(name_plan[0])
+
+    el = name_plan[1].split('\n')    
+
+
+    if (len(el) < 5):
+         acHan.Grasp(4, float(el[0]), 1.0)
+    else:
+         x = RobotTrajectory()
+   
+         el = p.split('\n')
+         #get frame id
+         fram_id = el[7].split(": ")[1]
+         x.joint_trajectory.header.frame_id = fram_id
+         #get joint names
+         joints = el[8].split(": ")[1][1:-1]
+         joints = joints.split(", ")
+         for j in range(0, len(joints)):
+              joints[j] = joints[j].split('\'')[1]
+         x.joint_trajectory.joint_names = joints
+
+         #get points
+         done = False
+         counter = 10
+         while(not done):
+              if ("multi" in el[counter]):
+                   done = True
+              else:
+                   y = JointTrajectoryPoint()
+
+                   #get pos
+                   pos = el[counter + 1].split(": ")[1][1:-1]
+                   pos = pos.split(", ")
+                   for i in range(0, len(pos)):
+                        pos[i] = float(pos[i])
+                   y.positions = pos
+                   #get vel
+                   vel = el[counter + 2].split(": ")[1][1:-1]
+                   vel = vel.split(", ")
+                   for i in range(0, len(vel)):
+                        vel[i] = float(vel[i])
+                   y.velocities = vel
+                   #get acc
+                   acc = el[counter + 3].split(": ")[1][1:-1]
+                   acc = acc.split(", ")
+                   for i in range(0, len(acc)):
+                        acc[i] = float(acc[i])
+                   y.accelerations = acc
+                   #get time
+                   st = el[counter + 6].split(": ")[1]
+                   et = el[counter + 7].split(": ")[1]
+                   y.time_from_start.secs = float(st)
+                   y.time_from_start.nsecs = float(et)
+
+                   x.joint_trajectory.points.append(y)    
+
+                   counter = counter + 8
+    
+         acHan.execute_plan(x)
+
+        
+t.close()
+
+rospy.signal_shutdown("Done")
+os._exit(0)
+roscpp_shutdown()
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "./run_plans.py", line 38, in <module>
+    el = name_plan[1].split('\n')    
+IndexError: list index out of range
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cd ~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ source ~/Documents/John/nri-authoring-environment/wpi_jaco/devel/setup.bash
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cp save_p
+save_plans.py  save_pos.py    
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py               save_pos.py
+actions.pyc       mico_gripperControl.pyc  run_plans.sh               TE_all.txt
+dump              mico_server.py           saved_plans.txt            TERall.txt
+examplePickUp.sh  oldfiles                 saved_pos.txt              TLDall.txt
+gripper_tester    oldtxt                   saved_pos.txt~             TLUall.txt
+kitting.py        pick_and_place.py        saved_pos.txt.bk.03-24-16
+mico_client.py    plans                    save_plans.py
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ cp saved_plans.txt saved_plans.txt.bk.03-24-16
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans saved_plans.txt
+bash: ./run_plans: No such file or directory
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py saved_plans.txt
+[ INFO] [1458841904.122913624]: Loading robot model 'mico'...
+[ INFO] [1458841904.693546629]: Loading robot model 'mico'...
+[ INFO] [1458841906.026901504]: Ready to take MoveGroup commands for group arm.
+Above2
+Above1
+Grab1
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim save_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt
+
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py
+[ INFO] [1458842033.065931920]: Loading robot model 'mico'...
+[ INFO] [1458842033.592493575]: Loading robot model 'mico'...
+[ INFO] [1458842034.862483467]: Ready to take MoveGroup commands for group arm.
+")
+plans = plans[1:]
+
+for p in plans:
+    name_plan = p.split(' >\n')
+    print(name_plan[0])
+
+    el = name_plan[1].split('\n')    
+
+
+    if (len(el) < 5):
+         acHan.Grasp(4, float(el[0]), 1.0)
+    else:
+         x = RobotTrajectory()
+   
+         el = p.split('\n')
+         #get frame id
+         fram_id = el[7].split(": ")[1]
+         x.joint_trajectory.header.frame_id = fram_id
+         #get joint names
+         joints = el[8].split(": ")[1][1:-1]
+         joints = joints.split(", ")
+         for j in range(0, len(joints)):
+              joints[j] = joints[j].split('\'')[1]
+         x.joint_trajectory.joint_names = joints
+
+         #get points
+         done = False
+         counter = 10
+         while(not done):
+              if ("multi" in el[counter]):
+                   done = True
+              else:
+                   y = JointTrajectoryPoint()
+
+                   #get pos
+                   pos = el[counter + 1].split(": ")[1][1:-1]
+                   pos = pos.split(", ")
+                   for i in range(0, len(pos)):
+                        pos[i] = float(pos[i])
+                   y.positions = pos
+                   #get vel
+                   vel = el[counter + 2].split(": ")[1][1:-1]
+                   vel = vel.split(", ")
+                   for i in range(0, len(vel)):
+                        vel[i] = float(vel[i])
+                   y.velocities = vel
+                   #get acc
+                   acc = el[counter + 3].split(": ")[1][1:-1]
+                   acc = acc.split(", ")
+                   for i in range(0, len(acc)):
+                        acc[i] = float(acc[i])
+                   y.accelerations = acc
+                   #get time
+                   st = el[counter + 6].split(": ")[1]
+                   et = el[counter + 7].split(": ")[1]
+                   y.time_from_start.secs = float(st)
+                   y.time_from_start.nsecs = float(et)
+
+                   x.joint_trajectory.points.append(y)    
+
+                   counter = counter + 8
+    
+         acHan.execute_plan(x)
+
+        
+t.close()
+
+rospy.signal_shutdown("Done")
+os._exit(0)
+roscpp_shutdown()
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "./run_plans.py", line 38, in <module>
+    el = name_plan[1].split('\n')    
+IndexError: list index out of range
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_plans.txt
+[ INFO] [1458842075.022698105]: Loading robot model 'mico'...
+[ INFO] [1458842075.546645361]: Loading robot model 'mico'...
+[ INFO] [1458842076.755652640]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_plans.txt
+Traceback (most recent call last):
+  File "./save_plans.py", line 38, in <module>
+    if (out[1] == "NAME\t"):
+IndexError: list index out of range
+^C
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ^C
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458842094.022493423]: Loading robot model 'mico'...
+[ INFO] [1458842094.561747658]: Loading robot model 'mico'...
+[ INFO] [1458842095.795338766]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458842361.854477239]: Loading robot model 'mico'...
+[ INFO] [1458842362.442097563]: Loading robot model 'mico'...
+[ INFO] [1458842363.647005046]: Ready to take MoveGroup commands for group arm.
+[ERROR] [WallTime: 1458842393.669934] Server not online!
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim saved_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458842452.254538973]: Loading robot model 'mico'...
+[ INFO] [1458842452.826275509]: Loading robot model 'mico'...
+[ INFO] [1458842454.115859480]: Ready to take MoveGroup commands for group arm.
+^C[ERROR] [WallTime: 1458842465.600141] Server not online!
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458842511.481115401]: Loading robot model 'mico'...
+[ INFO] [1458842512.006073908]: Loading robot model 'mico'...
+[ INFO] [1458842513.233255228]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ gedit saved_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ gedit saved_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458842902.801872531]: Loading robot model 'mico'...
+[ INFO] [1458842903.411869308]: Loading robot model 'mico'...
+[ INFO] [1458842904.699413688]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ls
+actions.py        mico_gripperControl.py   run_plans.py                 save_plans.py
+actions.pyc       mico_gripperControl.pyc  run_plans.sh                 save_pos.py
+dump              mico_server.py           saved_plans.txt              TE_all.txt
+examplePickUp.sh  oldfiles                 saved_plans.txt.bk.03-24-16  TERall.txt
+gripper_tester    oldtxt                   saved_pos.txt                TLDall.txt
+kitting.py        pick_and_place.py        saved_pos.txt~               TLUall.txt
+mico_client.py    plans                    saved_pos.txt.bk.03-24-16
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458843405.471415328]: Loading robot model 'mico'...
+[ INFO] [1458843406.050491538]: Loading robot model 'mico'...
+[ INFO] [1458843407.353564035]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ history | grep grasp
+ 2084  history | grep grasp
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ history | grep "grasp"
+ 2084  history | grep grasp
+ 2085  history | grep "grasp"
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ grep -nri ./ "grasp"
+grep: grasp: No such file or directory
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ grep ./ -nri "grasp"
+grep: grasp: No such file or directory
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ grep -nri "grasp" ./
+./gripper_tester/gripper_timing.py:57:           acHan.Grasp(4, counter, 1.0)
+./gripper_tester/gripper_timing.py:75:    han.Grasp(4,x,1.0)
+./gripper_tester/grip_tester.txt:2: >Grasp50	>50
+./gripper_tester/grip_tester.txt:3: >Grasp75	>75
+./gripper_tester/grip_tester.txt:4: >Grasp100	>100
+./save_pos.py:35:    inp = raw_input("Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > ")
+./save_pos.py:42:    elif "Grasp" in inp:
+./actions.py:44:    # Preperation for grasp
+./actions.py:59:                    self.Grasp(arm, 0, 1.0)
+./actions.py:79:    # Grasping an object
+./actions.py:83:    #             effort (int) = grasp pressure
+./actions.py:85:    # Return : True if the object was grasped
+./actions.py:86:    def Grasp(self, arm, position, effort):
+./actions.py:209:    # Hold a grasp while another hand performs a function
+./actions.py:214:    # Return : True if grasp is held
+./oldtxt/final_video_pos.txt~:4: >GraspOpen	>0
+./oldtxt/final_video_pos.txt~:7: >GraspClose	>75
+./oldtxt/final_video_pos.txt~:10: >GraspRelease	>40
+./oldtxt/final_video_pos.txt~:12: >GraspOpen 		>0
+./oldtxt/final_video_pos.txt~:15: >GraspClose	>75
+./oldtxt/final_video_pos.txt~:19: >GraspRelease	>0
+./oldtxt/final_video_pos.txt~:23: >GraspClose	>75
+./oldtxt/final_video_pos.txt~:26: >GraspRelease	>40
+./oldtxt/final_video_pos.txt~:28: >GraspOpen	>0
+./oldtxt/final_video_pos.txt:4: >GraspOpen	>0
+./oldtxt/final_video_pos.txt:7: >GraspClose	>75
+./oldtxt/final_video_pos.txt:10: >GraspRelease	>40
+./oldtxt/final_video_pos.txt:12: >GraspOpen 		>0
+./oldtxt/final_video_pos.txt:15: >GraspClose	>75
+./oldtxt/final_video_pos.txt:19: >GraspRelease	>0
+./oldtxt/final_video_pos.txt:23: >GraspClose	>75
+./oldtxt/final_video_pos.txt:26: >GraspRelease	>40
+./oldtxt/final_video_pos.txt:28: >GraspOpen	>0
+./oldtxt/final_video_pos.txt:31: >GraspClose	>75
+./oldtxt/final_video_pos.txt:34: >GraspRelease	>30
+./oldtxt/final_video_pos.txt:36: >GraspOpen	>0
+Binary file ./actions.pyc matches
+./run_plans.py:42:         acHan.Grasp(4, float(el[0]), 1.0)
+./oldfiles/play_move.py:42:        if "Grasp" in name:
+./oldfiles/play_move.py:48:             acHan.Grasp(4, pos, 1.0)
+./examplePickUp.sh:9:./run_plans.py plans/Grasp_60
+./saved_pos.txt.bk.03-24-16:5: >GraspGrab1	>[0.9307353861985606, 4.928950848643317, 1.6651210983897047, -1.9004253622939284, 1.8099860095714906, 2.692963726889988]
+./mico_server.py:32:    files.append("Grasp_80")
+./mico_server.py:35:    files.append("Grasp_30")
+./mico_server.py:39:    files.append("Grasp_80")
+./mico_server.py:42:    files.append("Grasp_30")
+./mico_server.py:46:    files.append("Grasp_80")
+./mico_server.py:49:    files.append("Grasp_30")
+./mico_server.py:53:    files.append("Grasp_80")
+./mico_server.py:56:    files.append("Grasp_30")
+./mico_server.py:90:            acHan.Grasp(4, float(p), 1.0)
+./save_plans.py:45:        if "Grasp" in name:
+./save_plans.py:51:             acHan.Grasp(4, pos, 1.0)
+./pick_and_place.py:55:    files.append("Grasp_80")
+./pick_and_place.py:58:    files.append("Grasp_30")
+./pick_and_place.py:86:            acHan.Grasp(4, float(el[0]), 1.0)
+./kitting.py:33:    files.append("Grasp_80")
+./kitting.py:36:    files.append("Grasp_30")
+./kitting.py:41:    files.append("Grasp_100")
+./kitting.py:43:    files.append("Grasp_30")
+./kitting.py:47:    #files.append("Grasp_80")
+./kitting.py:50:    #files.append("Grasp_30")
+./kitting.py:55:    #files.append("Grasp_80")
+./kitting.py:58:    #files.append("Grasp_30")
+./kitting.py:63:    #files.append("Grasp_100")
+./kitting.py:65:    #files.append("Grasp_30")
+./kitting.py:69:    #files.append("Grasp_80")
+./kitting.py:72:    #files.append("Grasp_30")
+./kitting.py:109:            acHan.Grasp(4, float(p), 1.0)
+./plans/Grasp_100:1:PLAN : Grasp >
+./plans/Grasp_75:1:PLAN : Grasp >
+./plans/Grasp_80:1:PLAN : Grasp >
+./plans/Grasp_25:1:PLAN : Grasp >
+./plans/Grasp_70:1:PLAN : Grasp >
+./plans/Grasp_60:1:PLAN : Grasp >
+./plans/Grasp_40:1:PLAN : Grasp >
+./plans/Grasp_30:1:PLAN : Grasp >
+./plans/Grasp_50:1:PLAN : Grasp >
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458843727.150718653]: Loading robot model 'mico'...
+[ INFO] [1458843727.741785783]: Loading robot model 'mico'...
+[ INFO] [1458843729.108351440]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+Traceback (most recent call last):
+  File "./save_plans.py", line 47, in <module>
+    pos = int(pos)
+ValueError: invalid literal for int() with base 10: '[1.4110215750922457, 4.753776634253393, 2.12519509303218, -2.6655936214189166, 1.1340677354261102, 2.553734464048972]'
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim ./oldtxt/final_video_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ gedit ./oldtxt/final_video_pos.txt
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458843873.656770519]: Loading robot model 'mico'...
+[ INFO] [1458843874.251839682]: Loading robot model 'mico'...
+[ INFO] [1458843875.469978422]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_pos.py
+[ INFO] [1458844118.736423309]: Loading robot model 'mico'...
+[ INFO] [1458844119.351327640]: Loading robot model 'mico'...
+[ INFO] [1458844120.593584665]: Ready to take MoveGroup commands for group arm.
+[WARN] [WallTime: 1458844124.257661] gripper action timeout.
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveRelease        
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > MoveLoadedAbove1  
+Enter GraspNAME POSITION to save a grasp move, MoveNAME to save a move commane, or q to Quit > q
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458845334.355992678]: Loading robot model 'mico'...
+[ INFO] [1458845334.956052658]: Loading robot model 'mico'...
+[ INFO] [1458845336.320133263]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458845384.032377] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458845466.025461256]: Loading robot model 'mico'...
+[ INFO] [1458845466.640686874]: Loading robot model 'mico'...
+[ INFO] [1458845467.949905556]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458845524.441987] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458845579.059934403]: Loading robot model 'mico'...
+[ INFO] [1458845579.662085529]: Loading robot model 'mico'...
+[ INFO] [1458845580.937089685]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458845637.285855] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458845772.531593665]: Loading robot model 'mico'...
+[ INFO] [1458845773.109343672]: Loading robot model 'mico'...
+[ INFO] [1458845774.458976156]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458845889.074131656]: Loading robot model 'mico'...
+[ INFO] [1458845889.671064447]: Loading robot model 'mico'...
+[ INFO] [1458845890.852178892]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458845920.457286] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458846034.185175693]: Loading robot model 'mico'...
+[ INFO] [1458846034.769015301]: Loading robot model 'mico'...
+[ INFO] [1458846036.006687123]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458846067.041230] gripper action timeout.
+[WARN] [WallTime: 1458846093.927517] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458846142.091113166]: Loading robot model 'mico'...
+[ INFO] [1458846142.697615976]: Loading robot model 'mico'...
+[ INFO] [1458846143.898498421]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458846147.118507] gripper action timeout.
+[WARN] [WallTime: 1458846202.533897] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458846248.573959982]: Loading robot model 'mico'...
+[ INFO] [1458846249.168103658]: Loading robot model 'mico'...
+[ INFO] [1458846250.365043769]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458846253.032994] gripper action timeout.
+[WARN] [WallTime: 1458846307.996914] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./save_plans.py saved_pos.txt
+[ INFO] [1458846589.269939188]: Loading robot model 'mico'...
+[ INFO] [1458846589.841646888]: Loading robot model 'mico'...
+[ INFO] [1458846591.143000889]: Ready to take MoveGroup commands for group arm.
+./save_plans.py
+saved_pos.txt
+Start
+[WARN] [WallTime: 1458846594.054122] gripper action timeout.
+[WARN] [WallTime: 1458846648.739906] gripper action timeout.
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py save_plans.txt
+[ INFO] [1458846717.521294146]: Loading robot model 'mico'...
+[ INFO] [1458846718.119914285]: Loading robot model 'mico'...
+[ INFO] [1458846719.362181527]: Ready to take MoveGroup commands for group arm.
+Traceback (most recent call last):
+  File "./run_plans.py", line 29, in <module>
+    t = open(str(f), "r")
+IOError: [Errno 2] No such file or directory: 'save_plans.txt'
+terminate called after throwing an instance of 'class_loader::LibraryUnloadException'
+  what():  Attempt to unload library that class_loader is unaware of.
+Aborted (core dumped)
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim save
+saved_plans.txt              saved_pos.txt.bk.03-24-16
+saved_plans.txt.bk.03-24-16  saved_pos.txt.bk.03-24-16~
+saved_pos_partial.txt        save_plans.py
+saved_pos.txt                save_pos.py
+saved_pos.txt~               
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py saved_plans.txt
+[ INFO] [1458846737.188138050]: Loading robot model 'mico'...
+[ INFO] [1458846737.761695661]: Loading robot model 'mico'...
+[ INFO] [1458846739.105290976]: Ready to take MoveGroup commands for group arm.
+Open
+Home
+TransportEmpty1Above
+Grab1
+Close
+Home
+LoadedAbove1
+Release
+Open
+[WARN] [WallTime: 1458846760.833901] gripper action timeout.
+LoadedAbove1
+Home
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py saved_plans.txt
+[ INFO] [1458846856.997903117]: Loading robot model 'mico'...
+[ INFO] [1458846857.576537366]: Loading robot model 'mico'...
+[ INFO] [1458846858.823084999]: Ready to take MoveGroup commands for group arm.
+Open
+^A[WARN] [WallTime: 1458846861.333371] gripper action timeout.
+Home
+TransportEmpty1Above
+Grab1
+Close
+Home
+LoadedAbove1
+Release
+Open
+[WARN] [WallTime: 1458846879.584075] gripper action timeout.
+LoadedAbove1
+Home
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim run_plans.py 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py saved_plans.txt
+[ INFO] [1458846994.948095062]: Loading robot model 'mico'...
+[ INFO] [1458846995.530549598]: Loading robot model 'mico'...
+[ INFO] [1458846996.867645105]: Ready to take MoveGroup commands for group arm.
+Open
+Home
+TransportEmpty1Above
+Grab1
+Close
+[WARN] [WallTime: 1458847013.625898] gripper action timeout.
+Home
+LoadedAbove1
+Release
+Open
+LoadedAbove1
+Home
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ vim run_plans.py 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py saved_plans.txt
+[ INFO] [1458847075.047618889]: Loading robot model 'mico'...
+[ INFO] [1458847075.650145131]: Loading robot model 'mico'...
+[ INFO] [1458847076.901942097]: Ready to take MoveGroup commands for group arm.
+Open
+[WARN] [WallTime: 1458847088.370089] gripper action timeout.
+Home
+TransportEmpty1Above
+Grab1
+Close
+Home
+LoadedAbove1
+Release
+Open
+LoadedAbove1
+Home
+^Chcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/srcypak/scripts$ vim run_plans.py 
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ ./run_plans.py saved_plans.txt
+[ INFO] [1458847190.672920044]: Loading robot model 'mico'...
+[ INFO] [1458847191.255982640]: Loading robot model 'mico'...
+[ INFO] [1458847192.521844408]: Ready to take MoveGroup commands for group arm.
+Open
+[WARN] [WallTime: 1458847199.086468] gripper action timeout.
+Home
+TransportEmpty1Above
+Grab1
+Close
+Home
+LoadedAbove1
+Release
+Open
+[WARN] [WallTime: 1458847217.517501] gripper action timeout.
+LoadedAbove1
+Home
+hcilab@hcilab-Latitude-E5540:~/Documents/John/nri-authoring-environment/wpi_jaco/src/mypak/scripts$ 
+

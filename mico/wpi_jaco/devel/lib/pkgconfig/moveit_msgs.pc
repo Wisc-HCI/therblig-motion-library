@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
+
+Name: moveit_msgs
+Description: Description of moveit_msgs
+Version: 0.6.1
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib 
+Requires: std_msgs actionlib_msgs sensor_msgs geometry_msgs trajectory_msgs shape_msgs object_recognition_msgs octomap_msgs

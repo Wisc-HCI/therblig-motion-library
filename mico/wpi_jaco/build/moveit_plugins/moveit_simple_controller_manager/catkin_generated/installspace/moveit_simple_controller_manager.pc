@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: moveit_simple_controller_manager
+Description: Description of moveit_simple_controller_manager
+Version: 0.5.6
+Cflags: 
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib 
+Requires: moveit_core

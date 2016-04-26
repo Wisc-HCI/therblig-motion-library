@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
+
+Name: moveit_ros_benchmarks
+Description: Description of moveit_ros_benchmarks
+Version: 0.6.5
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_ros/benchmarks/benchmarks/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib -lmoveit_benchmark_execution
+Requires: moveit_ros_planning moveit_ros_warehouse

@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: moveit_ros_planning
+Description: Description of moveit_ros_planning
+Version: 0.6.5
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lmoveit_rdf_loader -lmoveit_kinematics_plugin_loader -lmoveit_robot_model_loader -lmoveit_constraint_sampler_manager_loader -lmoveit_planning_pipeline -lmoveit_trajectory_execution_manager -lmoveit_plan_execution -lmoveit_planning_scene_monitor
+Requires: pluginlib moveit_core moveit_ros_perception

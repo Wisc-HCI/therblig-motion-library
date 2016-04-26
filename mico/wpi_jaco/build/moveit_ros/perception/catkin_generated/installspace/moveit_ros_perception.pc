@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
+
+Name: moveit_ros_perception
+Description: Description of moveit_ros_perception
+Version: 0.6.5
+Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include -I/opt/ros/indigo/include
+Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lmoveit_lazy_free_space_updater -lmoveit_point_containment_filter -lmoveit_occupancy_map_monitor -lmoveit_pointcloud_octomap_updater_core -lmoveit_semantic_world -l:/opt/ros/indigo/lib/liboctomap.so -l:/opt/ros/indigo/lib/liboctomath.so
+Requires: moveit_core image_transport moveit_msgs
