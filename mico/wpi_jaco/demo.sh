@@ -4,6 +4,8 @@
 #export ROBOT=sim
 #export ROS_PACKAGE_PATH=~/Documents/John/wpi_jaco:$ROS_PACKAGE_PATH
 
+# Very old initialization tool used before we switch to MoveIt
+# Feel free to delete it
 
 echo "start script.."
 

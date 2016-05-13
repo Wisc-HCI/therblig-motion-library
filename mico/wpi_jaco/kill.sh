@@ -1,4 +1,9 @@
 #!/bin/bash
+
+###
+# This tool was built my Chein-ming, grad student from a few years ago.
+# I'm not sure how it works but it is useful in killing python processes.
+
 echo "Killing project related processes..."
 
 pid=`ps aux |grep python | awk '{print $2}'`
