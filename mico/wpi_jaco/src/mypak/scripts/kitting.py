@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+###
+# Can ignore this file. A simple tool for running a group of plans by listing them in order.
+
+
+
 from actions import ActionHandler
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+###
+# A simple old file used to test getting plans from files
+
 from actions import ActionHandler
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown

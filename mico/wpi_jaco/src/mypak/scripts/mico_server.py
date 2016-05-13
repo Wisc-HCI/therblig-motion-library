@@ -9,75 +9,9 @@ from geometry_msgs.msg import PoseStamped
 from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 
-
-def go():
-
-    node_name = 'mico_planner'
-    group_name = 'arm'
-    planner_name = 'RRTstarkConfigDefault'
-    ee_link_name = 'mico_link_endeffector'
-
-    roscpp_initialize(sys.argv)
-    rospy.init_node(node_name, anonymous=True)
-
-    acHan = ActionHandler(group_name, planner_name, ee_link_name)
-
-    rospy.sleep(1)
-
-    files = []
-
-    #get files
-    files.append("Release")
-    files.append("TransEmpty_1_0")
-    files.append("Grasp_80")
-    files.append("TransLoadedUp_1_0")
-    files.append("TransLoadedDown_1_0")
-    files.append("Grasp_30")
-    files.append("TransEmptyRetract_1_0")
-    files.append("Release")
-    files.append("TransEmpty_3_1")
-    files.append("Grasp_80")
-    files.append("TransLoadedUp_3_1")
-    files.append("TransLoadedDown_3_1")
-    files.append("Grasp_30")
-    files.append("TransEmptyRetract_3_1")
-    files.append("Release")
-    files.append("TransEmpty_2_0")
-    files.append("Grasp_80")
-    files.append("TransLoadedUp_2_0")
-    files.append("TransLoadedDown_2_0")
-    files.append("Grasp_30")
-    files.append("TransEmptyRetract_2_0")
-    files.append("Release")
-    files.append("TransEmpty_4_1")
-    files.append("Grasp_80")
-    files.append("TransLoadedUp_4_1")
-    files.append("TransLoadedDown_4_1")
-    files.append("Grasp_30")
-    files.append("TransEmptyRetract_4_1")
-
-    #get plans
-    plans = []
-
-    for f in files:
-
-        t = open("plans/" + str(f), "r")
-
-        p = getPlans(t, acHan)
-
-        i = 0
-        while(i < len(p)):
-            plans.append(p[i])
-            i = i + 1
-
-        t.close()
-
-
-    count = 0
-    while(count < 1):
-        runPlans(plans, acHan)  
-        count = count + 1 
-
+###
+# Takes a list of plans and an action handler as input.
+# Executes the list of the plans.
 def runPlans(plans, acHan):
     
     count = 0
@@ -93,8 +27,9 @@ def runPlans(plans, acHan):
 
         count = count + 1
 
-
-
+###
+# Takes a file and an action handler as input.
+# Returns a list of the plans found in the file.
 def getPlans(f, acHan):
 
     file_plans = []
@@ -165,8 +100,9 @@ def getPlans(f, acHan):
     
     return file_plans
 
-
-
+###
+# Standard action handler and node setup nedded for all our scripts.
+#   Returns an aciotn handler.
 def setup_arm():
     #initialize steps
     node_name = 'mico_planner'
@@ -180,7 +116,10 @@ def setup_arm():
     acHan = ActionHandler(group_name, planner_name, ee_link_name)
     return acHan
 
-
+###
+# The main loop of this file
+#   Creates the socket. Takes an action handler as input.
+#   Should recieve therblig messages and translate them into plans to be run by the action handler.
 def socket_loop(acHan):
 
     #create an INET, STREAMing socket
@@ -262,7 +201,9 @@ def socket_loop(acHan):
 
     s.close()
 
-
+###
+# The standard script end calls used in all of our scripts.
+# This should be called last.
 def end():
     rospy.signal_shutdown("Done")
     os._exit(0)
@@ -270,14 +211,15 @@ def end():
 
 
 
-
-
 if __name__ == '__main__':
   
+    # Build the action handler
     acHan = setup_arm()
 
+    # Start the socket
     socket_loop(acHan)
 
+    # End this script
     end()
 
 

@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+###
+# A test file for a python client
+# client sends a single message to the server.
+
+
 import socket
 import struct
 

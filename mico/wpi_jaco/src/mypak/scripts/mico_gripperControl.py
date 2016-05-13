@@ -2,6 +2,10 @@
 
 __author__ = 'drakita'
 
+###
+# A tool borrowed from another HCI group. This file defines a MicoGripperControl Object and has functions for controlling the mico gripper. 
+# Used by the ActionHandler object in actions.py
+
 import sys
 import rospy
 import actionlib

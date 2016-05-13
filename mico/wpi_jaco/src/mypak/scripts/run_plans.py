@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+###
+# Takes a file full of plans and and runs each plan 
+
 from actions import ActionHandler
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
@@ -8,6 +11,8 @@ from geometry_msgs.msg import PoseStamped
 from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 
+
+##Initialize steps
 node_name = 'mico_planner'
 group_name = 'arm'
 planner_name = 'RRTstarkConfigDefault'
@@ -20,6 +25,8 @@ rospy.init_node(node_name, anonymous=True)
 acHan = ActionHandler(group_name, planner_name, ee_link_name)
 
 rospy.sleep(5)
+
+
 
 f = 0
 
