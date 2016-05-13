@@ -51,6 +51,4 @@ Create a Plan from scratch:<br />
 		`cp saved_plans.py plans/[YOUR PLAN NAME]`
 
 
-`rosmake pr2lib`
-
 
