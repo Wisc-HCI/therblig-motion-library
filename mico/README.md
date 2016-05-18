@@ -9,11 +9,11 @@ wpi_jaco -- contains all the code<br />
 devel -- standard catkin workspace devel folder (source devel/setup.bash)<br />
 build -- standard catkin workspace build folder<br />
 src -- source code for nodes <br />
-	mypak/scripts -- contains all the team written code and executables<br />
-		dump -- basically a trash folder for filed to be deleted
-		gripper_tester -- contains files for testing the mico gripper funtionality
-		oldfiles and oldtext-- files from earlier experiments 
-		plans -- folder to store saved plans
+mypak/scripts -- contains all the team written code and executables<br />
+dump -- basically a trash folder for filed to be deleted<br />
+gripper_tester -- contains files for testing the mico gripper funtionality<br />
+oldfiles and oldtext -- files from earlier experiments <br />
+plans -- folder to store saved plans<br />
 
 ##Important Files:
 
