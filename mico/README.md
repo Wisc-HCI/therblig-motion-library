@@ -2,12 +2,32 @@
 
 This package contains code for interacting with the Mico arm. All the useful code can be found in wpi_jaco/src/mypak/scripts.<br />
 
+**_ROS Indigo_** is required to use this project
+
+##Workspace setup and important info
+To install, clone this branch (build-ready)
+1. Naviate to the source directory to init the workspace
+`cd /path/to/therblig-motion-library/mico/wpi_jaco/src`
+2. Have to do this before using catkin
+`source /opt/ros/indigo/setup.sh`
+3. init the workspace 
+`catkin_init_workspace`
+4. and finally make the project
+`cd ..`
+`catkin_make`
+
+Building should take a few minutes, but after that it is all set!
+
+**Important** make sure that you add the **build/** and **devel/** folders to your git ignore,
+otherwise the project will not build on other machines unless they are first deleted.
+
+Make sure to set the paths properly in runRviz.sh if you plan on using that
+
+
 
 ##Folders:
 mico -- this folder <br />
 wpi_jaco -- contains all the code<br />
-devel -- standard catkin workspace devel folder (source devel/setup.bash)<br />
-build -- standard catkin workspace build folder<br />
 src -- source code for nodes <br />
 mypak/scripts -- contains all the team written code and executables<br />
 dump -- basically a trash folder for filed to be deleted<br />
