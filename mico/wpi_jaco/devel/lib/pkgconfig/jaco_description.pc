@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
-
-Name: jaco_description
-Description: Description of jaco_description
-Version: 0.0.22
-Cflags: 
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib 
-Requires: 

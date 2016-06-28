@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "mico_description")
-set(mico_description_MAINTAINER "Mathijs de Langen <langen@robot-rose.nl>")
-set(mico_description_DEPRECATED "")
-set(mico_description_VERSION "0.0.22")
-set(mico_description_BUILD_DEPENDS )
-set(mico_description_RUN_DEPENDS "xacro" "joint_state_publisher" "robot_state_publisher")
-set(mico_description_BUILDTOOL_DEPENDS "catkin")

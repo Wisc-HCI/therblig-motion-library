@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "mico_ikfast_arm_plugin")
-set(mico_ikfast_arm_plugin_MAINTAINER "cbodden <cbodden@todo.todo>")
-set(mico_ikfast_arm_plugin_DEPRECATED "")
-set(mico_ikfast_arm_plugin_VERSION "0.0.0")
-set(mico_ikfast_arm_plugin_BUILD_DEPENDS "moveit_core" "liblapack-dev" "roscpp" "tf_conversions" "pluginlib")
-set(mico_ikfast_arm_plugin_RUN_DEPENDS "moveit_core" "liblapack-dev" "roscpp" "tf_conversions" "pluginlib")
-set(mico_ikfast_arm_plugin_BUILDTOOL_DEPENDS "catkin")

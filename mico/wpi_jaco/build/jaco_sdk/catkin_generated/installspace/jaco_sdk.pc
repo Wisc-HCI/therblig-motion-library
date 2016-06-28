@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
-
-Name: jaco_sdk
-Description: Description of jaco_sdk
-Version: 0.0.22
-Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lKinova.API.CommLayerUbuntu -lKinova.API.USBCommandLayerUbuntu
-Requires: 

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "jaco_teleop")
-set(jaco_teleop_MAINTAINER "David Kent <davidkent@wpi.edu>, Russell Toris <rctoris@wpi.edu>")
-set(jaco_teleop_DEPRECATED "")
-set(jaco_teleop_VERSION "0.0.22")
-set(jaco_teleop_BUILD_DEPENDS "roscpp" "sensor_msgs" "wpi_jaco_msgs")
-set(jaco_teleop_RUN_DEPENDS "roscpp" "sensor_msgs" "wpi_jaco_msgs")
-set(jaco_teleop_BUILDTOOL_DEPENDS "catkin")

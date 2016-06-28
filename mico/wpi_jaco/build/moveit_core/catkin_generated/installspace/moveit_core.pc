@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
-
-Name: moveit_core
-Description: Description of moveit_core
-Version: 0.6.15
-Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include -I/opt/ros/indigo/include -I/usr/include -I/usr/local/include/eigen3
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lmoveit_exceptions -lmoveit_background_processing -lmoveit_kinematics_base -lmoveit_robot_model -lmoveit_transforms -lmoveit_robot_state -lmoveit_robot_trajectory -lmoveit_planning_interface -lmoveit_collision_detection -lmoveit_collision_detection_fcl -lmoveit_kinematic_constraints -lmoveit_planning_scene -lmoveit_constraint_samplers -lmoveit_planning_request_adapter -lmoveit_profiler -lmoveit_trajectory_processing -lmoveit_distance_field -lmoveit_kinematics_metrics -lmoveit_dynamics_solver -l:/opt/ros/indigo/lib/liboctomap.so -l:/opt/ros/indigo/lib/liboctomath.so -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so -l:/usr/lib/x86_64-linux-gnu/libboost_date_time.so -l:/usr/lib/x86_64-linux-gnu/libboost_thread.so -l:/usr/lib/x86_64-linux-gnu/libboost_iostreams.so -l:/usr/lib/x86_64-linux-gnu/libpthread.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_model.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_world.so -l:/usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-Requires: geometric_shapes eigen_stl_containers eigen_conversions random_numbers moveit_msgs kdl_parser srdfdom

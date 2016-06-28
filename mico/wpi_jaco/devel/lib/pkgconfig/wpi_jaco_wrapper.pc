@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
-
-Name: wpi_jaco_wrapper
-Description: Description of wpi_jaco_wrapper
-Version: 0.0.22
-Cflags: 
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib 
-Requires: 

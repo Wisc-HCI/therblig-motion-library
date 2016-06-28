@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "moveit_planners_ompl")
-set(moveit_planners_ompl_MAINTAINER "Ioan Sucan <isucan@willowgarage.com>")
-set(moveit_planners_ompl_DEPRECATED "")
-set(moveit_planners_ompl_VERSION "0.6.7")
-set(moveit_planners_ompl_BUILD_DEPENDS "moveit_core" "ompl" "eigen_conversions" "moveit_ros_planning" "dynamic_reconfigure" "roscpp" "tf" "pluginlib")
-set(moveit_planners_ompl_RUN_DEPENDS "moveit_core" "ompl" "eigen_conversions" "moveit_ros_planning" "dynamic_reconfigure" "roscpp" "tf" "pluginlib")
-set(moveit_planners_ompl_BUILDTOOL_DEPENDS "catkin")

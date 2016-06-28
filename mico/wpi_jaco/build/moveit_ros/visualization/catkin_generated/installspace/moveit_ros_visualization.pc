@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
-
-Name: moveit_ros_visualization
-Description: Description of moveit_ros_visualization
-Version: 0.6.5
-Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lmoveit_rviz_plugin_render_tools -lmoveit_robot_state_rviz_plugin_core -lmoveit_motion_planning_rviz_plugin_core -lmoveit_trajectory_rviz_plugin_core -lmoveit_planning_scene_rviz_plugin_core
-Requires: moveit_ros_planning_interface moveit_ros_robot_interaction

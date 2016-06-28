@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
-
-Name: moveit_ros_planning_interface
-Description: Description of moveit_ros_planning_interface
-Version: 0.6.5
-Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lmoveit_common_planning_interface_objects -lmoveit_planning_scene_interface -lmoveit_move_group_interface
-Requires: moveit_ros_planning moveit_ros_warehouse moveit_ros_manipulation moveit_ros_move_group

@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
-
-Name: moveit_planners_ompl
-Description: Description of moveit_planners_ompl
-Version: 0.6.7
-Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/include -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/src/moveit_planners/ompl/ompl_interface/include -I/opt/ros/indigo/include
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib -lmoveit_ompl_interface -l:/opt/ros/indigo/lib/x86_64-linux-gnu/libompl.so
-Requires: moveit_core

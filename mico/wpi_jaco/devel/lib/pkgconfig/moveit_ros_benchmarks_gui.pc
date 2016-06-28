@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
-
-Name: moveit_ros_benchmarks_gui
-Description: Description of moveit_ros_benchmarks_gui
-Version: 0.6.5
-Cflags: 
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib 
-Requires: 

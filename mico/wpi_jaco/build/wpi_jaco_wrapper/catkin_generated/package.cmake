@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "wpi_jaco_wrapper")
-set(wpi_jaco_wrapper_MAINTAINER "David Kent <davidkent@wpi.edu>, Russell Toris <rctoris@wpi.edu>")
-set(wpi_jaco_wrapper_DEPRECATED "")
-set(wpi_jaco_wrapper_VERSION "0.0.22")
-set(wpi_jaco_wrapper_BUILD_DEPENDS "controller_manager" "control_msgs" "ecl_geometry" "hardware_interface" "wpi_jaco_msgs" "jaco_sdk" "roscpp" "actionlib" "rail_manipulation_msgs" "sensor_msgs" "std_msgs" "std_srvs" "tf")
-set(wpi_jaco_wrapper_RUN_DEPENDS "controller_manager" "control_msgs" "ecl_geometry" "hardware_interface" "wpi_jaco_msgs" "jaco_sdk" "rail_manipulation_msgs" "roscpp" "actionlib" "sensor_msgs" "std_msgs" "std_srvs" "tf")
-set(wpi_jaco_wrapper_BUILDTOOL_DEPENDS "catkin")

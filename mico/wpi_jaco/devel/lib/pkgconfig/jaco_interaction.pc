@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel
-
-Name: jaco_interaction
-Description: Description of jaco_interaction
-Version: 0.0.22
-Cflags: 
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/devel/lib 
-Requires: 

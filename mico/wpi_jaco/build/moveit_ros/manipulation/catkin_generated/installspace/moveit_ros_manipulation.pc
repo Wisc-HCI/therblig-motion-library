@@ -1,8 +1,0 @@
-prefix=/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install
-
-Name: moveit_ros_manipulation
-Description: Description of moveit_ros_manipulation
-Version: 0.6.5
-Cflags: -I/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/include
-Libs: -L/home/hcilab/Documents/John/nri-authoring-environment/wpi_jaco/install/lib -lmoveit_pick_place_planner
-Requires: moveit_core moveit_ros_planning
