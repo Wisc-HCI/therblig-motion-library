@@ -19,6 +19,8 @@ To install, clone this branch (build-ready)<br/>
 cd ..
 catkin_make
 ```
+7. Whenever you work with the project make sure to do<br/>
+`source /path/to/therblig-motion-library/mico/wpi_jaco/devel/setup.sh`<br/>
 
 
 Building should take a few minutes, but after that it is all set!
