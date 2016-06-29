@@ -5,18 +5,20 @@ This package contains code for interacting with the Mico arm. All the useful cod
 **_ROS Indigo_** is required to use this project
 
 ##Workspace setup and important info
-To install, clone this branch (build-ready)
-1. [Install the Kinova SDK MICO (not mico2)](http://www.kinovarobotics.com/service-robotics/products/software/)
-2. [Add this file to /etc/udev/rules.d/](https://github.com/Kinovarobotics/kinova-ros/blob/master/jaco_driver/udev/99-jaco-arm.rules)
-3. Naviate to the source directory to init the workspace
-...`cd /path/to/therblig-motion-library/mico/wpi_jaco/src`
-4. Have to do this before using catkin
-...`source /opt/ros/indigo/setup.sh`
-5. init the workspace 
-...`catkin_init_workspace`
-6. and finally make the project
-...`cd ..`
-...`catkin_make`
+To install, clone this branch (build-ready)<br/>
+1. [Install the Kinova SDK MICO (not mico2)](http://www.kinovarobotics.com/service-robotics/products/software/)<br/>
+2. [Add this file to /etc/udev/rules.d/](https://github.com/Kinovarobotics/kinova-ros/blob/master/jaco_driver/udev/99-jaco-arm.rules)<br/>
+3. Naviate to the source directory to init the workspace<br/>
+`cd /path/to/therblig-motion-library/mico/wpi_jaco/src`<br/>
+4. Have to do this before using catkin<br/>
+`source /opt/ros/indigo/setup.sh`<br/>
+5. init the workspace <br/>
+`catkin_init_workspace`<br/>
+6. and finally make the project<br/>
+```
+cd ..
+catkin_make
+```
 
 
 Building should take a few minutes, but after that it is all set!
