@@ -256,12 +256,16 @@ class PGraph(Persistent):
         @return: true if removed, false if either node doesn't exist
         '''
 
+        removed = False
         if self.hasNode(nodeFromID) and self.hasNode(nodeToID):
-            self.pGraph[nodeFromID].removePath(nodeToID)
+            if self.pGraph[nodeFromID].hasMasterPath(nodeToID):
+                removed = self.pGraph[nodeFromID].removeMasterPath(nodeToID)
+            else:
+                removed = self.pGraph[nodeFromID].removePath(nodeToID)
             self._p_changed = True
-            return True
+            return removed
         else:
-            return False
+            return removed
 
     def listNodes(self):
         '''

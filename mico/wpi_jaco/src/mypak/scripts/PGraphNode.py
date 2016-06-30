@@ -147,6 +147,7 @@ class PGraphNode(Persistent):
 
         if pGraphNodeID in self.masterPath:
             del self.masterPath[pGraphNodeID]
+            self._p_changed = True
             return True
         else:
             return False
