@@ -115,13 +115,13 @@ Moves from the current node to the specified node, returns true if path exists a
 false if node doesn't exist, current node is not set, or path doesn't exist.
 
 ##PGraphNode.py
-This describes the nodes and what functions can be applied on them. 
-Nodes contain: 
-ID, the reference value for the node.
-A list of paths, which is a dictionary that has the destination Node ID as the key and the path plan as the value.<br/> 
-Name is a way to describe the node and give it human significance.<br/>
-Pos is the the joint position data of the node.<br/>
-MasterPath is a dictionary of of the master paths, which contains the destination node ID as the key,
+This describes the nodes and what functions can be applied on them.<br/>
+**Nodes contain:**<br/> 
+**ID**, the reference value for the node.<br/>
+**A list of paths**, which is a dictionary that has the destination Node ID as the key and the path plan as the value.<br/> 
+**Name** is a way to describe the node and give it human significance.<br/>
+**Pos** is the the joint position data of the node.<br/>
+**MasterPath** is a dictionary of of the master paths, which contains the destination node ID as the key,
 and the list of node ID's from first node to travel to, to the last node that the arm moves to.<br/>
 
 **Note about master paths:** They don't combine the path plans between all the nodes it steps through, but rather creates and stores the 
