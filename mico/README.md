@@ -9,7 +9,7 @@ To install, clone this branch (build-ready)<br/>
 1. [Install the Kinova SDK MICO (not mico2)](http://www.kinovarobotics.com/service-robotics/products/software/)<br/>
 2. [Add this file to /etc/udev/rules.d/](https://github.com/Kinovarobotics/kinova-ros/blob/master/jaco_driver/udev/99-jaco-arm.rules)<br/>
 3. Install rail_manipulation_msgs<br/>
-`sudo apt-get install ros-jade-rail-manipulation-msgs`<br/>
+`sudo apt-get install ros-indigo-rail-manipulation-msgs`<br/>
 4. Install dependencies<br/>
 `rosdep install --from-paths src --ignore-src --rosdistro=indigo -y`<br/>
 5. Naviate to the source directory to init the workspace<br/>
