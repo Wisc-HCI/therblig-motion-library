@@ -44,7 +44,7 @@ class PGraph(Persistent):
                 print "planning move"
                 plan = acHan.plan(self.currNode.getPos())
                 print "executing move"
-                acHan.execute_plan(plan)
+                acHan.async_execute_plan(plan)
             return True
         else:
             return False
@@ -142,7 +142,7 @@ class PGraph(Persistent):
                 print "Planning move to start location"
                 plan = acHan.plan(self.currNode.getPos())
                 print "moving to start location"
-                acHan.execute_plan(plan)
+                acHan.async_execute_plan(plan)
             acHan.set_start()
             print "making path from " + self.currNode.getName() + " to " + self.pGraph[nodeToID].getName()
             pathPlan = acHan.plan(self.pGraph[nodeToID].getPos())
@@ -183,7 +183,7 @@ class PGraph(Persistent):
                 print "Planning move to start location"
                 plan = acHan.plan(self.currNode.getPos())
                 print "moving to start location"
-                acHan.execute_plan(plan)
+                acHan.async_execute_plan(plan)
 
             # CIA: Now what's the next step in your
             # combine list of plans in path to make the master plan
@@ -192,7 +192,7 @@ class PGraph(Persistent):
                 currPlan = self.currNode.getPath(path[i])
                 if currPlan is not None:
                     print "Plan already exists to " + self.pGraph[path[i]].getName() + ", using that and moving there"
-                    acHan.execute_plan(currPlan)
+                    acHan.async_execute_plan(currPlan)
                     # set new position node as current
                     self.currNode = self.pGraph[path[i]]
                 else:
@@ -203,7 +203,7 @@ class PGraph(Persistent):
                     self.currNode.setPath(path[i], planPart)
                     # have to move to the next node to plan the next path
                     print "Moving to " + self.pGraph[path[i]].getName()
-                    acHan.execute_plan(planPart)
+                    acHan.async_execute_plan(planPart)
                     self.currNode = self.pGraph[path[i]]
 
             # add path to start node's master path list
@@ -298,12 +298,12 @@ class PGraph(Persistent):
             if self.currNode.hasMasterPath(pGraphNodeID):
                 for pathNode in self.currNode.getMasterPath(pGraphNodeID):
                     acHan.set_start()
-                    acHan.execute_plan(self.currNode.getPath(pathNode))
+                    acHan.async_execute_plan(self.currNode.getPath(pathNode))
                     self.currNode = self.pGraph[pathNode]
 
             elif self.currNode.getPath(pGraphNodeID) is not None:
                 acHan.set_start()
-                acHan.execute_plan(self.currNode.getPath(pGraphNodeID))
+                acHan.async_execute_plan(self.currNode.getPath(pGraphNodeID))
                 self.currNode = self.pGraph[pGraphNodeID]
             else:
                 return False

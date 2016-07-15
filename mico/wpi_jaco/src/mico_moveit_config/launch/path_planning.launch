@@ -61,4 +61,10 @@
   <!-- If database loading was enabled, start mongodb as well -->
   <include file="$(find mico_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)"/>
 
+  <!-- stops execution time monitoring so a plan won't be stopped by passing timeout -->
+  <param name="move_group/trajectory_execution/allowed_execution_duration_scaling" value="4.0" />
+  <param name="move_group/trajectory_execution/execution_duration_monitoring" value="false" />
+
+
+
 </launch>

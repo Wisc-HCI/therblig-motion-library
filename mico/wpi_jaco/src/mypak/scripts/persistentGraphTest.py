@@ -176,6 +176,19 @@ while(True):
         except ValueError:
             print "Use integer values only for node ID's"
 
+    # perform a grasp action
+    elif userIn[0] == "grasp" and len(userIn) == 2:
+        # validate that second argument is a float 0 <= x <= 100
+        try:
+            graspVal = float(userIn[1])
+            if graspVal >= 0 and graspVal <= 100:
+                acHan.Grasp(4, graspVal, 1)
+            else:
+                print "value was not in acceptable bounds for grasping"
+        except ValueError:
+            print "Value for grasping must be a floating point number"
+
+
 
     # default
     else:

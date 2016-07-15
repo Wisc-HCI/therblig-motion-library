@@ -224,13 +224,22 @@ class ActionHandler:
 # PLANNING AND MOVEMENT FUNCTIONS
 
     ################
-    # Executes the plan of the real arm
+    # Executes the plan of the real arm, does not allow for the plan to be stopped during execution
     #
     # Arguments : plan (plan pbject) = the plan to execute
     #
     # Return : True if the plan was executed
     def execute_plan(self, plan):
         return self.group.execute(plan)
+
+    ################
+    # Executes the plan of the real arm, allows for the plan to be stopped by stop()
+    #
+    # Arguments : plan (plan pbject) = the plan to execute
+    #
+    # Return : True if the plan was executed
+    def async_execute_plan(self, plan):
+        return self.group.execute(plan, False)
 
     ###############
     # Plan motion based on a set of end positions
@@ -284,7 +293,11 @@ class ActionHandler:
 
     def planning_frame(self):
         return self.group.get_planning_frame()
-  
+
+    def stop(self):
+        #stops robot execution currently, if any
+
+        return self.group.stop()
 
 
 
