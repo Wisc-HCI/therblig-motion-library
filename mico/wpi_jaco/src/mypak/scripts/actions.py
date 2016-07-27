@@ -5,6 +5,7 @@ import moveit_commander
 import moveit_msgs.msg
 from sensor_msgs.msg import JointState
 from mico_gripperControl import MicoGripperControl
+import geometry_msgs.msg
 
 
 ################
@@ -250,6 +251,15 @@ class ActionHandler:
     def plan(self, positions):
         return self.group.plan(positions)
 
+    ###############
+    # Plan motion based on a goal pose location
+    #
+    # Arguments: coordinates of the goal pose
+    #
+    # Return : Returns a the plan
+    def pose_plan(self, pose):
+        self.group.set_pose_target(pose)
+        return self.group.plan()
 
     def set_start(self):
         self.group.set_start_state_to_current_state()
@@ -294,10 +304,11 @@ class ActionHandler:
     def planning_frame(self):
         return self.group.get_planning_frame()
 
+    # stops robot execution currently, if any execution is occurring
     def stop(self):
-        #stops robot execution currently, if any
-
         return self.group.stop()
+
+
 
 
 

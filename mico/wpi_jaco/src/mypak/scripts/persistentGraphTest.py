@@ -7,6 +7,7 @@
 import PGraph
 from ZODB import FileStorage, DB
 import transaction
+import forceControlWrapper
 from actions import ActionHandler
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
@@ -42,6 +43,9 @@ pGraph = pGraphDB["graph"]
 
 # clear persistent program memory
 pGraph.setCurrNodeNone()
+
+# get force control wrapper
+fc = forceControlWrapper.ForceControl()
 
 while(True):
 
@@ -188,7 +192,13 @@ while(True):
         except ValueError:
             print "Value for grasping must be a floating point number"
 
-
+    # start force control
+    elif userIn[0] == "startfc" and len(userIn) == 1:
+        fc.startForceControl()
+        stopfc = raw_input("Enter q to stop force control: ")
+        while stopfc is not "q":
+            stopfc = raw_input("Enter q to stop force control: ")
+        fc.stopForceControl()
 
     # default
     else:

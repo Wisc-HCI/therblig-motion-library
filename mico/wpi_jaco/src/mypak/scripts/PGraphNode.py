@@ -9,11 +9,13 @@ from persistent import Persistent
 
 class PGraphNode(Persistent):
 
-    def __init__(self, ID, name, pos):
+    def __init__(self, ID, name, pos, pose):
         self.paths = {}
         self.ID = ID
         self.name = name
         self.pos = pos
+        # end effector
+        self.pose = pose
         self.masterPath = {}
 
     def getPos(self):
@@ -42,6 +44,12 @@ class PGraphNode(Persistent):
         '''
 
         return self.name
+
+    def getPose(self):
+        '''
+        return: the pose of the end effector
+        '''
+        return self.pose
 
     def setPath(self, pGraphNodeID, path):
         '''

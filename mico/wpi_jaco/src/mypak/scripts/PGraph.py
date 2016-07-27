@@ -14,6 +14,26 @@ class PGraph(Persistent):
         self.pGraph = OOBTree.OOBTree()
         self.currNode = None
 
+    def getAuthoringInfo(self):
+        data = {}
+        for id in self.pGraph:
+            list = {}
+            list['name'] = self.pGraph[id].getName()
+            pos = {}
+            pos['x'] = self.pGraph[id].getPose().pose.position.x
+            pos['y'] = self.pGraph[id].getPose().pose.position.y
+            pos['z'] = self.pGraph[id].getPose().pose.position.z
+            list['position'] = pos
+            orientation = {}
+            orientation['w'] = self.pGraph[id].getPose().pose.orientation.w
+            orientation['x'] = self.pGraph[id].getPose().pose.orientation.x
+            orientation['y'] = self.pGraph[id].getPose().pose.orientation.y
+            orientation['z'] = self.pGraph[id].getPose().pose.orientation.z
+            list['orientation'] = orientation
+            list['id'] = id
+            data[id] = list
+        return data
+
     def getCurrNode(self):
         '''
         getCurrNode returns the current node
@@ -37,6 +57,7 @@ class PGraph(Persistent):
         @return: true if successful, false otherwise
         '''
 
+        print "Im in the method"
         if pGraphNodeID in self.pGraph:
             self.currNode = self.pGraph[pGraphNodeID]
             if acHan.current_joints() != self.currNode.getPos():
@@ -83,7 +104,7 @@ class PGraph(Persistent):
             print "Node already exists for " + str(pGraphNodeID)
             return False
         else:
-            newNode = PGraphNode.PGraphNode(pGraphNodeID, name, acHan.current_joints())
+            newNode = PGraphNode.PGraphNode(pGraphNodeID, name, acHan.current_joints(), acHan.current_pose())
             self.pGraph[pGraphNodeID] = newNode
             self._p_changed = True
             print "Added node: " + str(pGraphNodeID)

@@ -1,0 +1,5 @@
+*.fs
+*.fs.*
+.idea
+/mico/wpi_jaco/devel/
+/mico/wpi_jaco/build/

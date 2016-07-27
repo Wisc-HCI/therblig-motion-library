@@ -14,6 +14,8 @@ find_package(catkin REQUIRED COMPONENTS message_generation actionlib_msgs geomet
 add_message_files(
   FILES
   AngularCommand.msg
+  authoring.msg
+  ArmNode.msg
   CartesianCommand.msg
   JacoFingerVel.msg
 )
