@@ -13,12 +13,26 @@ class PGraph(Persistent):
     def __init__(self):
         self.pGraph = OOBTree.OOBTree()
         self.currNode = None
+        self.authoredPlans = {}
 
+    # gets the authored plans
+    def getAuthoredPlans(self):
+        return self.authoredPlans
+
+    # sets the authored plans made from the environment
+    def setAuthoredPlans(self, task, plan):
+        self._p_changed = True
+        self.authoredPlans[task] = plan
+
+    # loads the saved position data
     def getAuthoringInfo(self):
         data = {}
         for id in self.pGraph:
             list = {}
+            # name
             list['name'] = self.pGraph[id].getName()
+
+            # pose
             pos = {}
             pos['x'] = self.pGraph[id].getPose().pose.position.x
             pos['y'] = self.pGraph[id].getPose().pose.position.y
@@ -30,7 +44,12 @@ class PGraph(Persistent):
             orientation['y'] = self.pGraph[id].getPose().pose.orientation.y
             orientation['z'] = self.pGraph[id].getPose().pose.orientation.z
             list['orientation'] = orientation
+
+            # ID
             list['id'] = id
+
+            # list of position ID's planned paths exist to
+            list['paths'] = self.pGraph[id].getPaths().keys()
             data[id] = list
         return data
 
