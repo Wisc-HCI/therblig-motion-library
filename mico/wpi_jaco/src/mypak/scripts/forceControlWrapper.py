@@ -8,6 +8,10 @@ temp = os.path.dirname(temp)
 temp = os.path.join(temp, "libfc.so")
 lib = cdll.LoadLibrary(temp)
 
+# to compile the library
+# g++ -c -fPIC forceControl.cpp -o fc.o
+# g++ -shared -Wl,-soname,libfc.so -o libfc.so  fc.o
+
 
 class ForceControl(object):
     def __init__(self):
