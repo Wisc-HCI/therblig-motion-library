@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 
 from ctypes import cdll
-lib = cdll.LoadLibrary('./libfc.so')
+import os
+temp = os.path.abspath(__file__)
+temp = os.path.realpath(temp)
+temp = os.path.dirname(temp)
+temp = os.path.join(temp, "libfc.so")
+lib = cdll.LoadLibrary(temp)
 
 
 class ForceControl(object):
