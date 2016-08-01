@@ -9,8 +9,8 @@
 echo "Source.."
 
 # set these paths to the relevant paths on your machine
-source ~/PycharmProjects/therblig-motion-library/mico/wpi_jaco/devel/setup.bash
-cd ~/PycharmProjects/therblig-motion-library/mico/wpi_jaco/
+source ~/marshall/therblig-motion-library/mico/wpi_jaco/devel/setup.bash
+cd ~/marshall/therblig-motion-library/mico/wpi_jaco/
 sleep 1
 
 #Launch the RViz simulator

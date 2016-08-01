@@ -53,6 +53,28 @@ class PGraph(Persistent):
             data[id] = list
         return data
 
+    # test plans and run them in full
+    def taskPlanPlayback(self, taskname, acHan):
+        # get task plan
+        if taskname in self.authoredPlans:
+            taskPlan = self.authoredPlans[taskname]
+            # skip first node in iteration
+            iterable = iter(taskPlan)
+            next(iterable)
+            # move to start pose
+            (ID, grasp) = taskPlan[0].items()
+            self.setCurrNode(ID, acHan)
+            # execute plan
+            for pose in iterable:
+                (ID, grasp) = pose.items()
+                self.moveTo(ID, acHan)
+                if grasp is not None:
+                    acHan.Grasp(grasp)
+        else:
+            print "No task by name of " + taskname +" exists"
+
+
+
     def getCurrNode(self):
         '''
         getCurrNode returns the current node
@@ -175,6 +197,9 @@ class PGraph(Persistent):
 
         if self.currNode.getPath(nodeToID) is not None:
             print "path already exists"
+            return True
+        elif self.getCurrNode().getID() == nodeToID:
+            print "Can't make path to self"
             return True
         elif nodeToID in self.pGraph and self.currNode is not None:
             if self.currNode.getPos() != acHan.current_joints():
