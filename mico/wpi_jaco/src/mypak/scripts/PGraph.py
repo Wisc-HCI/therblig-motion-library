@@ -56,20 +56,39 @@ class PGraph(Persistent):
     # test plans and run them in full
     def taskPlanPlayback(self, taskname, acHan):
         # get task plan
+        print "in task plan"
         if taskname in self.authoredPlans:
             taskPlan = self.authoredPlans[taskname]
             # skip first node in iteration
             iterable = iter(taskPlan)
             next(iterable)
             # move to start pose
-            (ID, grasp) = taskPlan[0].items()
+            ID = taskPlan[0]['id']
+            grasp = taskPlan[0]['graspVal']
+            print "id: " + str(id) + " graspVal: " + str(grasp)
+            try:
+                ID = int(ID)
+                grasp = float(grasp)
+            except ValueError:
+                print "bad ID or graspVal, ID: " + str(ID) + " graspVal: " + str(grasp)
             self.setCurrNode(ID, acHan)
             # execute plan
             for pose in iterable:
-                (ID, grasp) = pose.items()
-                self.moveTo(ID, acHan)
-                if grasp is not None:
-                    acHan.Grasp(grasp)
+                ID = pose['id']
+                grasp = pose['graspVal']
+                print "id: " + str(ID) + " graspVal: " + str(grasp)
+                try:
+                    ID = int(ID)
+                    grasp = float(grasp)
+                except ValueError:
+                    print "bad ID or graspVal, ID: " + str(ID) + " graspVal: " + str(grasp)
+                print "executing move to ID: " + str(ID)
+                self.setCurrNode(ID, acHan)
+                #self.moveTo(ID, acHan)
+                '''commented out for gripper repair
+                if grasp >= 0 and grasp <= 100:
+                    acHan.Grasp(4, grasp, 1)
+                '''
         else:
             print "No task by name of " + taskname +" exists"
 
@@ -374,4 +393,5 @@ class PGraph(Persistent):
                 return False
             return True
         else:
+            print "node may not exist"
             return False

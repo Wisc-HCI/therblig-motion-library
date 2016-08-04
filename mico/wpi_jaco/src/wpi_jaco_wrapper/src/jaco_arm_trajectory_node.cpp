@@ -78,6 +78,9 @@ JacoArmTrajectoryController::JacoArmTrajectoryController(ros::NodeHandle nh, ros
   angularCmdSubscriber = nh.subscribe(arm_name_+"_arm/angular_cmd", 1, &JacoArmTrajectoryController::angularCmdCallback,
                                       this);
 
+  forceControlSubscriber = nh.subscribe(arm_name_+"_arm/Forcecontrol", 1, &JacoArmTrajectoryController::ForcecontrolCallback,
+                                       this);
+
   // Services
   jaco_fk_client = nh.serviceClient<wpi_jaco_msgs::JacoFK>(arm_name_+"_arm/kinematics/fk");
   qe_client = nh.serviceClient<wpi_jaco_msgs::QuaternionToEuler>("jaco_conversions/quaternion_to_euler");
@@ -956,6 +959,18 @@ bool JacoArmTrajectoryController::loadParameters(const ros::NodeHandle n)
 /*****************************************/
 /**********  Basic Arm Commands **********/
 /*****************************************/
+
+void JacoArmTrajectoryController::ForcecontrolCallback(const std_msgs::Bool& msg)
+{
+    if (msg.data)
+    {
+        StartForceControl();
+    } else
+    {
+        StopForceControl();
+    }
+    return;
+}
 
 void JacoArmTrajectoryController::angularCmdCallback(const wpi_jaco_msgs::AngularCommand& msg)
 {

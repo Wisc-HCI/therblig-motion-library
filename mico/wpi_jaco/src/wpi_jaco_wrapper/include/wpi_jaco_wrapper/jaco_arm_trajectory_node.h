@@ -136,6 +136,9 @@ public:
 
 private:
   bool loadParameters(const ros::NodeHandle n);
+
+  void ForcecontrolCallback(const std_msgs::Bool& msg);
+
   /**
    * \brief Callback for sending an angular command to the arm
    * @param msg angular command and info
@@ -222,6 +225,7 @@ private:
   ros::Publisher armHomedPublisher; //!< publisher for when the arm completes a kinova api home arm action
   ros::Subscriber cartesianCmdSubscriber; //!< subscriber for Cartesian arm commands
   ros::Subscriber angularCmdSubscriber; //!< subscriber for angular arm commands
+  ros::Subscriber forceControlSubscriber;
 
   // Services
   ros::ServiceClient jaco_fk_client; //!< forward kinematics client
