@@ -125,7 +125,7 @@ class PGraph(Persistent):
                 print "planning move"
                 plan = acHan.plan(self.currNode.getPos())
                 print "executing move"
-                acHan.async_execute_plan(plan)
+                acHan.execute_plan(plan)
             return True
         else:
             return False
@@ -394,4 +394,19 @@ class PGraph(Persistent):
             return True
         else:
             print "node may not exist"
+            return False
+
+    def grasp(self, graspVal, acHan):
+        '''
+        makes a grasp call, returns true if valid and executed, false if invalid value
+        '''
+        try:
+            graspVal = float(graspVal)
+            if graspVal >= 0 and graspVal <= 100:
+                acHan.Grasp(4, graspVal, 1)
+                return True
+            else:
+                return False
+        except ValueError:
+            print "invalid grasp value, not a float"
             return False

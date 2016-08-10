@@ -137,7 +137,8 @@ while(True):
     # go to a node
     elif userIn[0] == "go" and len(userIn) == 2:
         try:
-            pGraph.setCurrNode(int(userIn[1]), acHan)
+            while pGraph.setCurrNode(int(userIn[1]), acHan) is not True:
+                pass
         except ValueError:
             print "Use integer values only for node ID's"
 
