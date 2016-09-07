@@ -410,3 +410,12 @@ class PGraph(Persistent):
         except ValueError:
             print "invalid grasp value, not a float"
             return False
+
+    def executeStep(self, ID, graspVal, acHan):
+        '''
+        executes a step of a plan by first moving to a position and then grasping or not
+        '''
+        self.setCurrNode(ID, acHan)
+        self.grasp(graspVal, acHan)
+
+
