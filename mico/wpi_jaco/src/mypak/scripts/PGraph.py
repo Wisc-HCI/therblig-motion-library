@@ -85,10 +85,8 @@ class PGraph(Persistent):
                 print "executing move to ID: " + str(ID)
                 self.setCurrNode(ID, acHan)
                 #self.moveTo(ID, acHan)
-                '''commented out for gripper repair
                 if grasp >= 0 and grasp <= 100:
                     acHan.Grasp(4, grasp, 1)
-                '''
         else:
             print "No task by name of " + taskname +" exists"
 
