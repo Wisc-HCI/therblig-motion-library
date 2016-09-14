@@ -416,4 +416,22 @@ class PGraph(Persistent):
         self.setCurrNode(ID, acHan)
         self.grasp(graspVal, acHan)
 
+    def removeNodeByName(self, name):
+        '''
+        removes all nodes with a certain name
+        '''
+        for key in self.pGraph:
+            if self.pGraph[key].getName() == name:
+                print "removed " + name
+                del self.pGraph[key]
+                self._p_changed = True
+
+    def removeTaskPlan(self, taskplan):
+        '''
+        removes a task plan
+        '''
+        if taskplan in self.authoredPlans:
+            del self.authoredPlans[taskplan]
+            print "removed " + taskplan
+            self._p_changed = True
 
