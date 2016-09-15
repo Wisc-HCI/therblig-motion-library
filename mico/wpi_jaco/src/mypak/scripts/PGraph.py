@@ -72,6 +72,11 @@ class PGraph(Persistent):
             except ValueError:
                 print "bad ID or graspVal, ID: " + str(ID) + " graspVal: " + str(grasp)
             self.setCurrNode(ID, acHan)
+            if grasp >= 0 and grasp <= 100:
+                print "grasping " + str(grasp)
+                acHan.Grasp(4, grasp, 1)
+            else:
+                print "grasp val " + str(grasp) + " is invalid"
             # execute plan
             for pose in iterable:
                 ID = pose['id']
@@ -86,7 +91,10 @@ class PGraph(Persistent):
                 self.setCurrNode(ID, acHan)
                 #self.moveTo(ID, acHan)
                 if grasp >= 0 and grasp <= 100:
+                    print "grasping " + str(grasp)
                     acHan.Grasp(4, grasp, 1)
+                else:
+                    print "grasp val " + str(grasp) + " is invalid"
         else:
             print "No task by name of " + taskname +" exists"
 
@@ -115,14 +123,13 @@ class PGraph(Persistent):
         @return: true if successful, false otherwise
         '''
 
-        print "Im in the method"
         if pGraphNodeID in self.pGraph:
             self.currNode = self.pGraph[pGraphNodeID]
             if acHan.current_joints() != self.currNode.getPos():
                 acHan.set_start()
-                print "planning move"
+                print "planning move to " + self.pGraph[pGraphNodeID].getName()
                 plan = acHan.plan(self.currNode.getPos())
-                print "executing move"
+                print "executing moveto " + self.pGraph[pGraphNodeID].getName()
                 acHan.execute_plan(plan)
             return True
         else:
