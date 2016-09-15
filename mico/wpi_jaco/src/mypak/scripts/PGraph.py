@@ -24,6 +24,12 @@ class PGraph(Persistent):
         self._p_changed = True
         self.authoredPlans[task] = plan
 
+    def getAuthoredPlan(self, taskname):
+        if taskname in self.authoredPlans:
+            return self.authoredPlans[taskname]
+        else: 
+            return None
+
     # loads the saved position data
     def getAuthoringInfo(self):
         data = {}
@@ -442,3 +448,7 @@ class PGraph(Persistent):
             print "removed " + taskplan
             self._p_changed = True
 
+
+    def printTasks(self):
+        for task in self.authoredPlans:
+            print task
