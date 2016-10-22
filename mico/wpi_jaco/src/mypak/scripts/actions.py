@@ -269,6 +269,13 @@ class ActionHandler:
 ####################
 # ARM STATE FUNCTIONS
 
+
+    ################
+    # Set the workspace of the arm
+    #
+    def setWorkspace(self, minx, miny, minz, maxx, maxy, maxz):
+        self.group.set_workspace([minx, miny, minz, maxx, maxy, maxz])
+
     ################
     # Get the current arm roll, pitch, yaw 
     #

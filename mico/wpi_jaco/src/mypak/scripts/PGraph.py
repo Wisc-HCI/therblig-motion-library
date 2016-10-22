@@ -21,14 +21,38 @@ class PGraph(Persistent):
 
     # sets the authored plans made from the environment
     def setAuthoredPlans(self, task, plan):
-        self._p_changed = True
         self.authoredPlans[task] = plan
+        self._p_changed = True
 
     def getAuthoredPlan(self, taskname):
         if taskname in self.authoredPlans:
             return self.authoredPlans[taskname]
         else: 
             return None
+    
+    # removes a step in a plan at the specified index, 0 being the first
+    # returns 0 if removed, 1 if plan doesnt exist, and 2 if  index out of bounds
+    def removeStep(self, taskname, index):
+        if self.getAuthoredPlan(taskname) is not None:
+            if index < len(self.authoredPlans[taskname]):
+                del self.authoredPlans[taskname][index]
+                self._p_changed = True
+                return 0
+            else:
+                return 2
+        else:
+            return 1
+
+    # inserts a step in a plan at the specified step
+    # step is a dictionary containing name, graspval, xyz position, and node id
+    # returns 0 on success, 1 if the task doesnt exist
+    def addStep(self, taskname, index, step):
+        if self.getAuthoredPlan(taskname) is not None:
+            self.authoredPlans[taskname].insert(index, step)
+            self._p_changed = True
+            return 0
+        else:
+            return 1
 
     # loads the saved position data
     def getAuthoringInfo(self):
@@ -438,6 +462,15 @@ class PGraph(Persistent):
                 print "removed " + name
                 del self.pGraph[key]
                 self._p_changed = True
+
+    def getNodeByName(self, name):
+        '''
+        returns node if it exists, none otherwise
+        '''
+        for key in self.pGraph:
+            if self.pGraph[key].getName() == name:
+                return self.pGraph[key]
+        return None
 
     def removeTaskPlan(self, taskplan):
         '''
